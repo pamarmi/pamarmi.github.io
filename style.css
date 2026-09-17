@@ -518,3 +518,184 @@ main {
 
 
 }
+
+
+
+/* =========================================================
+   BACKGROUND PAGE
+   ========================================================= */
+
+.background-page {
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.background-intro {
+    max-width: 1000px;
+    margin-bottom: 100px;
+}
+
+.background-intro h1 {
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -0.065em;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   BACKGROUND STORY
+   ========================================================= */
+
+.background-story {
+    border-top: 1px solid #cfcfc8;
+}
+
+.background-block {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 8vw;
+
+    padding: 75px 0;
+
+    border-bottom: 1px solid #cfcfc8;
+
+    align-items: start;
+}
+
+
+/* Alternate direction */
+
+.background-block-reverse {
+    direction: rtl;
+}
+
+.background-block-reverse > * {
+    direction: ltr;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.background-heading {
+    max-width: 520px;
+}
+
+.background-number {
+    display: block;
+
+    color: #999;
+
+    font-size: 0.8rem;
+
+    margin-bottom: 22px;
+}
+
+.background-heading h2 {
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.background-page-content {
+    max-width: 650px;
+}
+
+.background-page-content p {
+    color: #666;
+
+    margin-bottom: 20px;
+
+    text-align: justify;
+}
+
+.background-page-content p:last-child {
+    margin-bottom: 0;
+}
+
+.background-closing {
+    color: #171717 !important;
+    font-size: 1.05rem;
+    margin-top: 0px;
+}
+.background-lead{
+width: 100%;
+max-width: none;
+margin-top: 40px;
+font-size: 1.15rem;
+color: #555;
+line-height: 1.7;
+text-align: justify;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.background-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-top: 50px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .background-page {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    .background-intro {
+        margin-bottom: 60px;
+    }
+
+    .background-intro h1 {
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+
+    .background-block,
+    .background-block-reverse {
+        display: block;
+
+        padding: 50px 0;
+
+        direction: ltr;
+    }
+
+    .background-heading {
+        margin-bottom: 35px;
+    }
+
+    .background-heading h2 {
+        font-size: 2.8rem;
+    }
+
+    .background-page-content p {
+        text-align: left;
+    }
+
+    .background-actions {
+        flex-wrap: wrap;
+        margin-top: 35px;
+    }
+}
