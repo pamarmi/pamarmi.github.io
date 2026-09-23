@@ -1077,52 +1077,72 @@ text-align: justify;
 }
 
 /* =========================================================
-   CV — MOBILE
+   CV PAGE — MOBILE
    ========================================================= */
 
 @media (max-width: 800px) {
 
     /* -----------------------------------------------------
-       CV INTRO
+       GENERAL
        ----------------------------------------------------- */
 
     .cv-page {
-        padding-top: 40px;
-        padding-bottom: 60px;
+        width: 100%;
+        padding-top: 35px;
+        padding-bottom: 50px;
     }
+
+    .cv-page * {
+        max-width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       INTRO
+       ----------------------------------------------------- */
 
     .cv-intro {
         display: block;
-        padding: 50px 0 55px;
+        width: 100%;
+        padding: 45px 0 50px;
     }
 
     .cv-intro-heading {
-        margin-bottom: 40px;
+        width: 100%;
+        margin-bottom: 35px;
     }
 
     .cv-intro-heading h1 {
-        font-size: clamp(3rem, 13vw, 5rem);
+        width: 100%;
+        font-size: clamp(2.8rem, 13vw, 5rem);
         line-height: .92;
+        letter-spacing: -.06em;
     }
 
     .cv-intro-text {
+        display: block;
         width: 100%;
     }
 
     .cv-intro-text p {
+        width: 100%;
+        margin-bottom: 20px;
         font-size: 1rem;
         line-height: 1.65;
     }
 
 
     /* -----------------------------------------------------
-       CV SECTIONS
+       ALL CV SECTIONS
+       Force everything to one column.
        ----------------------------------------------------- */
 
     .cv-section,
-    .cv-section-reverse {
-        display: block;
-        padding: 55px 0;
+    .cv-section-reverse,
+    .cv-section-wide {
+        display: block !important;
+        width: 100%;
+        padding: 50px 0;
     }
 
     .cv-section-reverse .cv-section-heading,
@@ -1131,16 +1151,25 @@ text-align: justify;
     }
 
     .cv-section-heading {
-        margin-bottom: 40px;
+        display: block;
+        width: 100%;
+        margin-bottom: 35px;
     }
 
     .cv-section-heading h2 {
-        font-size: clamp(2.5rem, 11vw, 4rem);
+        width: 100%;
+        font-size: clamp(2.4rem, 10vw, 4rem);
         line-height: .95;
+        letter-spacing: -.055em;
+    }
+
+    .cv-number {
+        margin-bottom: 15px;
     }
 
     .cv-section-content {
-        width: 100%;
+        display: block;
+        width: 100% !important;
     }
 
 
@@ -1149,24 +1178,45 @@ text-align: justify;
        ----------------------------------------------------- */
 
     .cv-entry {
+        display: block;
         width: 100%;
-        padding-bottom: 32px;
-        margin-bottom: 32px;
+        padding: 0 0 30px;
+        margin: 0 0 30px;
+    }
+
+    .cv-entry:last-child {
+        margin-bottom: 0;
     }
 
     .cv-entry-meta {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        margin-bottom: 14px;
+        display: block;
+        width: 100%;
+        margin-bottom: 12px;
+        font-size: .8rem;
+        line-height: 1.5;
+    }
+
+    .cv-entry-meta span {
+        display: block;
+        width: 100%;
     }
 
     .cv-entry h3 {
+        width: 100%;
+        margin-bottom: 8px;
         font-size: 1.3rem;
+        line-height: 1.2;
+    }
+
+    .cv-entry-place {
+        width: 100%;
+        margin-bottom: 16px;
     }
 
     .cv-entry p {
-        font-size: .98rem;
+        width: 100%;
+        font-size: .95rem;
+        line-height: 1.6;
     }
 
 
@@ -1175,12 +1225,22 @@ text-align: justify;
        ----------------------------------------------------- */
 
     .cv-skill {
+        display: block;
+        width: 100%;
         padding-bottom: 25px;
         margin-bottom: 25px;
     }
 
     .cv-skill h3 {
+        width: 100%;
         font-size: 1.25rem;
+        line-height: 1.2;
+    }
+
+    .cv-skill p {
+        width: 100%;
+        font-size: .95rem;
+        line-height: 1.6;
     }
 
 
@@ -1189,15 +1249,29 @@ text-align: justify;
        ----------------------------------------------------- */
 
     .cv-toolkit {
-        display: block;
+        display: block !important;
+        width: 100%;
     }
 
     .cv-toolkit > div {
-        margin-bottom: 32px;
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
     }
 
     .cv-toolkit > div:last-child {
         margin-bottom: 0;
+    }
+
+    .cv-toolkit h3 {
+        width: 100%;
+        font-size: 1.25rem;
+    }
+
+    .cv-toolkit p {
+        width: 100%;
+        font-size: .95rem;
+        line-height: 1.6;
     }
 
 
@@ -1205,13 +1279,33 @@ text-align: justify;
        SELECTED EXPERIENCE
        ----------------------------------------------------- */
 
+    .cv-section-wide .cv-section-heading {
+        margin-bottom: 35px;
+    }
+
     .cv-section-wide .cv-list {
-        display: block;
+        display: block !important;
+        width: 100%;
     }
 
     .cv-section-wide .cv-list-item {
+        display: block !important;
         width: 100%;
         padding: 22px 0 25px;
+        margin: 0;
+    }
+
+    .cv-section-wide .cv-list-item strong {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .cv-section-wide .cv-list-item span {
+        display: block;
+        width: 100%;
+        font-size: .95rem;
+        line-height: 1.6;
     }
 
 
@@ -1220,14 +1314,26 @@ text-align: justify;
        ----------------------------------------------------- */
 
     .cv-languages {
+        display: block;
         width: 100%;
     }
 
     .cv-languages p {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
+        display: block !important;
+        width: 100%;
         padding: 15px 0;
+        margin: 0;
+    }
+
+    .cv-languages strong,
+    .cv-languages span {
+        display: block;
+        width: 100%;
+    }
+
+    .cv-languages span {
+        margin-top: 3px;
+        font-size: .9rem;
     }
 
 
@@ -1237,17 +1343,31 @@ text-align: justify;
 
     .cv-image-block,
     .cv-image-block-right {
-        width: 100%;
-        margin: 35px 0;
+        display: block;
+        width: 100% !important;
+        margin: 35px 0 !important;
     }
 
     .cv-image {
+        display: block;
         width: 100%;
+        overflow: hidden;
     }
 
     .cv-image img {
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100%;
+    }
+
+    .cv-image-caption {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
         width: 100%;
-        height: auto;
+        padding-top: 8px;
+        font-size: .7rem;
     }
 
 
@@ -1256,27 +1376,40 @@ text-align: justify;
        ----------------------------------------------------- */
 
     .cv-downloads {
-        padding: 55px 0 50px;
+        display: block;
+        width: 100%;
+        padding: 50px 0;
     }
 
     .cv-downloads-content {
+        display: block;
         width: 100%;
-        margin-top: 30px;
+        margin: 30px 0 0;
     }
 
     .cv-downloads-content h2 {
-        font-size: clamp(2.5rem, 10vw, 4rem);
+        width: 100%;
+        font-size: clamp(2.4rem, 10vw, 4rem);
+        line-height: .95;
     }
 
     .cv-downloads-content p {
-        font-size: 1rem;
+        width: 100%;
+        font-size: .95rem;
+        line-height: 1.6;
     }
 
     .cv-download-links {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         align-items: flex-start;
-        gap: 22px;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .cv-download-links .button,
+    .cv-download-links .text-link {
+        max-width: 100%;
     }
 
 
@@ -1285,16 +1418,21 @@ text-align: justify;
        ----------------------------------------------------- */
 
     .cv-actions {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         align-items: flex-start;
-        gap: 22px;
-        padding-top: 45px;
+        width: 100%;
+        gap: 20px;
+        padding-top: 40px;
     }
 
-}
 
-.cv-section-wide .cv-list-item span {
-    display: block;
-    color: #555;
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    .site-footer {
+        width: auto;
+    }
+
 }
