@@ -526,22 +526,43 @@ main {
    ========================================================= */
 
 .background-page {
-    padding-top: 70px;
+    padding-top: 10px;
     padding-bottom: 80px;
 }
 
+
 .background-intro {
-    max-width: 1000px;
-    margin-bottom: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.background-intro-image {
+    width: 100%;
+
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.background-intro-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
 }
 
 .background-intro h1 {
+    width: 100%;
+    margin: 0;
+    text-align: right;
     font-size: clamp(3.5rem, 7vw, 7rem);
     line-height: 0.95;
     letter-spacing: -0.065em;
     font-weight: 500;
+    padding-bottom: 25px;
+    border-bottom: 0x solid #171717;
 }
-
 
 /* =========================================================
    BACKGROUND STORY
@@ -588,7 +609,7 @@ main {
 
     color: #999;
 
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 
     margin-bottom: 22px;
 }
@@ -698,4 +719,364 @@ text-align: justify;
         flex-wrap: wrap;
         margin-top: 35px;
     }
+}
+
+/* =========================================================
+   CV PAGE
+   ========================================================= */
+
+.cv-page {
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+
+/* ---------------------------------------------------------
+   INTRO
+   --------------------------------------------------------- */
+
+
+.cv-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    gap: 7vw;
+    padding: 60px 0 75px;
+    border-bottom: 1px solid #cfcfc8;
+}
+
+.cv-intro-heading h1 {
+    margin: 0;
+    font-size: clamp(4rem, 7vw, 7rem);
+    line-height: .92;
+    letter-spacing: -.065em;
+    font-weight: 500;
+}
+
+.cv-intro-text {
+    align-self: end;
+}
+
+.cv-intro-text p {
+    margin: 0 0 22px;
+    color: #555;
+    font-size: 1.08rem;
+    line-height: 1.65;
+}
+
+.cv-intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------------------------------------------------------
+   CV SECTIONS
+   --------------------------------------------------------- */
+
+.cv-section {
+    display: grid;
+    grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr);
+    column-gap: 5vw;
+    padding: 60px 0;
+    border-bottom: 1px solid #cfcfc8;
+}
+
+.cv-section-reverse {
+    grid-template-columns: minmax(0, 1.3fr) minmax(220px, .7fr);
+}
+
+.cv-section-reverse .cv-section-heading {
+    order: 2;
+}
+
+.cv-section-reverse .cv-section-content {
+    order: 1;
+}
+
+.cv-section-heading {
+    position: relative;
+    align-self: start;
+}
+
+.cv-number {
+    display: block;
+    margin-bottom: 18px;
+    font-size: .8rem;
+    color: #777;
+    letter-spacing: .03em;
+}
+
+.cv-section-heading h2 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4.2rem);
+    line-height: .95;
+    letter-spacing: -.055em;
+    font-weight: 500;
+}
+
+
+/* ---------------------------------------------------------
+   ENTRIES
+   --------------------------------------------------------- */
+
+.cv-entry {
+    padding: 0 0 38px;
+    margin-bottom: 38px;
+    border-bottom: 1px solid #deded8;
+}
+
+.cv-entry:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.cv-entry-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 12px;
+    color: #777;
+    font-size: .85rem;
+}
+
+.cv-entry h3,
+.cv-skill h3,
+.cv-toolkit h3 {
+    margin: 0 0 8px;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.cv-entry-place {
+    margin: 0 0 18px;
+    color: #555;
+    font-style: italic;
+}
+
+.cv-entry p:last-child {
+    margin-bottom: 0;
+}
+
+.cv-entry p {
+    color: #555;
+}
+
+
+/* ---------------------------------------------------------
+   SKILLS
+   --------------------------------------------------------- */
+
+.cv-skill {
+    padding: 0 0 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #deded8;
+}
+
+.cv-skill:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.cv-skill p {
+    margin: 0;
+    color: #555;
+}
+
+
+/* ---------------------------------------------------------
+   TECHNICAL TOOLKIT
+   --------------------------------------------------------- */
+
+.cv-toolkit {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 55px 50px;
+}
+
+.cv-toolkit h3 {
+    margin-bottom: 10px;
+}
+
+.cv-toolkit p {
+    margin: 0;
+    color: #555;
+}
+
+
+/* ---------------------------------------------------------
+   SELECTED EXPERIENCE LIST
+   --------------------------------------------------------- */
+
+.cv-list {
+    border-top: 1px solid #deded8;
+}
+
+.cv-list-item {
+    display: grid;
+    grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
+    gap: 40px;
+    padding: 25px 0;
+    border-bottom: 1px solid #deded8;
+}
+
+.cv-list-item strong {
+    font-weight: 600;
+}
+
+.cv-list-item span {
+    color: #555;
+}
+
+
+/* ---------------------------------------------------------
+   LANGUAGES
+   --------------------------------------------------------- */
+
+.cv-languages {
+    max-width: 700px;
+}
+
+.cv-languages p {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 30px;
+    padding: 16px 0;
+    margin: 0;
+    border-bottom: 1px solid #deded8;
+}
+
+.cv-languages p:first-child {
+    border-top: 1px solid #deded8;
+}
+
+.cv-languages span {
+    color: #555;
+}
+
+
+/* ---------------------------------------------------------
+   PRESENTATION IMAGES
+   --------------------------------------------------------- */
+
+.cv-image-block {
+    width: 100%;
+    margin: 10px 0 35px auto;
+}
+
+.cv-image-block-right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.cv-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.cv-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.cv-image-caption {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    color: #777;
+    font-size: .75rem;
+}
+
+
+
+
+/* ---------------------------------------------------------
+   DOWNLOADS
+   --------------------------------------------------------- */
+
+.cv-downloads {
+    padding: 70px 0 60px;
+    border-bottom: 1px solid #cfcfc8;
+}
+
+.cv-downloads-content {
+    width: min(850px, 100%);
+    margin-left: auto;
+    margin-top: 35px;
+}
+
+.cv-downloads-content h2 {
+    margin: 0 0 18px;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: .95;
+    letter-spacing: -.055em;
+    font-weight: 500;
+}
+
+.cv-downloads-content p {
+    max-width: 650px;
+    margin-bottom: 35px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.cv-download-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+/* ---------------------------------------------------------
+   ACTIONS
+   --------------------------------------------------------- */
+
+.cv-actions {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-top: 55px;
+}
+
+/* ---------------------------------------------------------
+   FULL-WIDTH EXPERIENCE
+   --------------------------------------------------------- */
+
+.cv-section-wide {
+    display: block;
+}
+
+.cv-section-wide .cv-section-heading {
+    margin-bottom: 45px;
+}
+
+.cv-section-wide .cv-section-content {
+    width: 100%;
+}
+
+.cv-section-wide .cv-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 7vw;
+    row-gap: 0;
+    border-top: 1px solid #deded8;
+}
+
+.cv-section-wide .cv-list-item {
+    display: block;
+    padding: 25px 0 28px;
+    border-bottom: 1px solid #deded8;
+}
+
+.cv-section-wide .cv-list-item strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.cv-section-wide .cv-list-item span {
+    display: block;
+    color: #555;
 }
