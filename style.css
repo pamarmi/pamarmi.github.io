@@ -1077,89 +1077,218 @@ text-align: justify;
 }
 
 /* =========================================================
-   FORCE CV MOBILE LAYOUT
+   CV — MOBILE: SINGLE COLUMN ONLY
    ========================================================= */
 
 @media screen and (max-width: 800px) {
 
-    /* CV INTRO */
-    .cv-page .cv-intro {
-        display: block !important;
-        grid-template-columns: none !important;
+    /* -----------------------------------------------------
+       GLOBAL CV CONTAINERS
+       ----------------------------------------------------- */
+
+    .cv-page,
+    .cv-page section,
+    .cv-page div {
+        max-width: 100%;
     }
 
-    /* EVERY CV SECTION */
-    .cv-page .cv-section {
+
+    /* -----------------------------------------------------
+       INTRO
+       ----------------------------------------------------- */
+
+    .cv-intro {
         display: block !important;
         grid-template-columns: none !important;
+        width: 100% !important;
     }
 
-    .cv-page .cv-section-reverse {
-        display: block !important;
-        grid-template-columns: none !important;
-    }
-
-    .cv-page .cv-section-wide {
-        display: block !important;
-        grid-template-columns: none !important;
-    }
-
-    /* CV HEADING / CONTENT */
-    .cv-page .cv-section-heading,
-    .cv-page .cv-section-content {
+    .cv-intro-heading,
+    .cv-intro-text {
         display: block !important;
         width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .cv-intro-heading {
+        margin-bottom: 40px;
+    }
+
+
+    /* -----------------------------------------------------
+       CV SECTIONS
+       ----------------------------------------------------- */
+
+    .cv-section,
+    .cv-section-reverse,
+    .cv-section-wide {
+        display: block !important;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+        width: 100% !important;
+    }
+
+    .cv-section-heading,
+    .cv-section-content {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
         grid-column: auto !important;
         grid-row: auto !important;
     }
 
-    /* REVERSE SECTIONS */
-    .cv-page .cv-section-reverse .cv-section-heading,
-    .cv-page .cv-section-reverse .cv-section-content {
+    .cv-section-heading {
+        margin-bottom: 40px;
+    }
+
+    .cv-section-reverse .cv-section-heading,
+    .cv-section-reverse .cv-section-content {
         order: initial !important;
     }
 
-    /* TOOLKIT */
-    .cv-page .cv-toolkit {
+
+    /* -----------------------------------------------------
+       EXPERIENCE / EDUCATION
+       ----------------------------------------------------- */
+
+    .cv-entry {
         display: block !important;
-        grid-template-columns: none !important;
+        width: 100% !important;
     }
 
-    /* SELECTED EXPERIENCE */
-    .cv-page .cv-list {
+    .cv-entry-meta {
         display: block !important;
-        grid-template-columns: none !important;
+        width: 100% !important;
     }
 
-    .cv-page .cv-list-item {
+    .cv-entry-meta span {
+        display: block !important;
+        width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       SKILLS
+       ----------------------------------------------------- */
+
+    .cv-skill {
+        display: block !important;
+        width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       TECHNICAL TOOLKIT
+       ----------------------------------------------------- */
+
+    .cv-toolkit {
         display: block !important;
         grid-template-columns: none !important;
         width: 100% !important;
     }
 
-    /* LANGUAGES */
-    .cv-page .cv-languages p {
+    .cv-toolkit > div {
+        display: block !important;
+        width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       SELECTED EXPERIENCE
+       ----------------------------------------------------- */
+
+    .cv-list {
         display: block !important;
         grid-template-columns: none !important;
+        width: 100% !important;
     }
 
-    /* IMAGES */
-    .cv-page .cv-image-block {
+    .cv-list-item {
+        display: block !important;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+        width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       LANGUAGES
+       ----------------------------------------------------- */
+
+    .cv-languages {
         display: block !important;
         width: 100% !important;
     }
 
-    .cv-page .cv-image img {
+    .cv-languages p {
+        display: block !important;
+        grid-template-columns: none !important;
         width: 100% !important;
+    }
+
+    .cv-languages strong,
+    .cv-languages span {
+        display: block !important;
+        width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       IMAGES
+       ----------------------------------------------------- */
+
+    .cv-image-block,
+    .cv-image-block-right,
+    .cv-image {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .cv-image img {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
         height: auto !important;
     }
 
-    /* DOWNLOADS */
-    .cv-page .cv-download-links {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
+
+    /* -----------------------------------------------------
+       DOWNLOADS
+       ----------------------------------------------------- */
+
+    .cv-downloads,
+    .cv-downloads-content {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .cv-download-links {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cv-download-links > * {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+
+    /* -----------------------------------------------------
+       ACTIONS
+       ----------------------------------------------------- */
+
+    .cv-actions {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cv-actions > * {
+        display: inline-block;
+        margin-bottom: 20px;
     }
 
 }
+
 
