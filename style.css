@@ -1077,362 +1077,89 @@ text-align: justify;
 }
 
 /* =========================================================
-   CV PAGE — MOBILE
+   FORCE CV MOBILE LAYOUT
    ========================================================= */
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
 
-    /* -----------------------------------------------------
-       GENERAL
-       ----------------------------------------------------- */
-
-    .cv-page {
-        width: 100%;
-        padding-top: 35px;
-        padding-bottom: 50px;
-    }
-
-    .cv-page * {
-        max-width: 100%;
-    }
-
-
-    /* -----------------------------------------------------
-       INTRO
-       ----------------------------------------------------- */
-
-    .cv-intro {
-        display: block;
-        width: 100%;
-        padding: 45px 0 50px;
-    }
-
-    .cv-intro-heading {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-
-    .cv-intro-heading h1 {
-        width: 100%;
-        font-size: clamp(2.8rem, 13vw, 5rem);
-        line-height: .92;
-        letter-spacing: -.06em;
-    }
-
-    .cv-intro-text {
-        display: block;
-        width: 100%;
-    }
-
-    .cv-intro-text p {
-        width: 100%;
-        margin-bottom: 20px;
-        font-size: 1rem;
-        line-height: 1.65;
-    }
-
-
-    /* -----------------------------------------------------
-       ALL CV SECTIONS
-       Force everything to one column.
-       ----------------------------------------------------- */
-
-    .cv-section,
-    .cv-section-reverse,
-    .cv-section-wide {
+    /* CV INTRO */
+    .cv-page .cv-intro {
         display: block !important;
-        width: 100%;
-        padding: 50px 0;
+        grid-template-columns: none !important;
     }
 
-    .cv-section-reverse .cv-section-heading,
-    .cv-section-reverse .cv-section-content {
-        order: initial;
+    /* EVERY CV SECTION */
+    .cv-page .cv-section {
+        display: block !important;
+        grid-template-columns: none !important;
     }
 
-    .cv-section-heading {
-        display: block;
-        width: 100%;
-        margin-bottom: 35px;
+    .cv-page .cv-section-reverse {
+        display: block !important;
+        grid-template-columns: none !important;
     }
 
-    .cv-section-heading h2 {
-        width: 100%;
-        font-size: clamp(2.4rem, 10vw, 4rem);
-        line-height: .95;
-        letter-spacing: -.055em;
+    .cv-page .cv-section-wide {
+        display: block !important;
+        grid-template-columns: none !important;
     }
 
-    .cv-number {
-        margin-bottom: 15px;
+    /* CV HEADING / CONTENT */
+    .cv-page .cv-section-heading,
+    .cv-page .cv-section-content {
+        display: block !important;
+        width: 100% !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
     }
 
-    .cv-section-content {
-        display: block;
+    /* REVERSE SECTIONS */
+    .cv-page .cv-section-reverse .cv-section-heading,
+    .cv-page .cv-section-reverse .cv-section-content {
+        order: initial !important;
+    }
+
+    /* TOOLKIT */
+    .cv-page .cv-toolkit {
+        display: block !important;
+        grid-template-columns: none !important;
+    }
+
+    /* SELECTED EXPERIENCE */
+    .cv-page .cv-list {
+        display: block !important;
+        grid-template-columns: none !important;
+    }
+
+    .cv-page .cv-list-item {
+        display: block !important;
+        grid-template-columns: none !important;
         width: 100% !important;
     }
 
-
-    /* -----------------------------------------------------
-       EXPERIENCE / EDUCATION
-       ----------------------------------------------------- */
-
-    .cv-entry {
-        display: block;
-        width: 100%;
-        padding: 0 0 30px;
-        margin: 0 0 30px;
-    }
-
-    .cv-entry:last-child {
-        margin-bottom: 0;
-    }
-
-    .cv-entry-meta {
-        display: block;
-        width: 100%;
-        margin-bottom: 12px;
-        font-size: .8rem;
-        line-height: 1.5;
-    }
-
-    .cv-entry-meta span {
-        display: block;
-        width: 100%;
-    }
-
-    .cv-entry h3 {
-        width: 100%;
-        margin-bottom: 8px;
-        font-size: 1.3rem;
-        line-height: 1.2;
-    }
-
-    .cv-entry-place {
-        width: 100%;
-        margin-bottom: 16px;
-    }
-
-    .cv-entry p {
-        width: 100%;
-        font-size: .95rem;
-        line-height: 1.6;
-    }
-
-
-    /* -----------------------------------------------------
-       SKILLS
-       ----------------------------------------------------- */
-
-    .cv-skill {
-        display: block;
-        width: 100%;
-        padding-bottom: 25px;
-        margin-bottom: 25px;
-    }
-
-    .cv-skill h3 {
-        width: 100%;
-        font-size: 1.25rem;
-        line-height: 1.2;
-    }
-
-    .cv-skill p {
-        width: 100%;
-        font-size: .95rem;
-        line-height: 1.6;
-    }
-
-
-    /* -----------------------------------------------------
-       TECHNICAL TOOLKIT
-       ----------------------------------------------------- */
-
-    .cv-toolkit {
+    /* LANGUAGES */
+    .cv-page .cv-languages p {
         display: block !important;
-        width: 100%;
+        grid-template-columns: none !important;
     }
 
-    .cv-toolkit > div {
-        display: block;
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .cv-toolkit > div:last-child {
-        margin-bottom: 0;
-    }
-
-    .cv-toolkit h3 {
-        width: 100%;
-        font-size: 1.25rem;
-    }
-
-    .cv-toolkit p {
-        width: 100%;
-        font-size: .95rem;
-        line-height: 1.6;
-    }
-
-
-    /* -----------------------------------------------------
-       SELECTED EXPERIENCE
-       ----------------------------------------------------- */
-
-    .cv-section-wide .cv-section-heading {
-        margin-bottom: 35px;
-    }
-
-    .cv-section-wide .cv-list {
+    /* IMAGES */
+    .cv-page .cv-image-block {
         display: block !important;
-        width: 100%;
-    }
-
-    .cv-section-wide .cv-list-item {
-        display: block !important;
-        width: 100%;
-        padding: 22px 0 25px;
-        margin: 0;
-    }
-
-    .cv-section-wide .cv-list-item strong {
-        display: block;
-        width: 100%;
-        margin-bottom: 8px;
-    }
-
-    .cv-section-wide .cv-list-item span {
-        display: block;
-        width: 100%;
-        font-size: .95rem;
-        line-height: 1.6;
-    }
-
-
-    /* -----------------------------------------------------
-       LANGUAGES
-       ----------------------------------------------------- */
-
-    .cv-languages {
-        display: block;
-        width: 100%;
-    }
-
-    .cv-languages p {
-        display: block !important;
-        width: 100%;
-        padding: 15px 0;
-        margin: 0;
-    }
-
-    .cv-languages strong,
-    .cv-languages span {
-        display: block;
-        width: 100%;
-    }
-
-    .cv-languages span {
-        margin-top: 3px;
-        font-size: .9rem;
-    }
-
-
-    /* -----------------------------------------------------
-       IMAGES
-       ----------------------------------------------------- */
-
-    .cv-image-block,
-    .cv-image-block-right {
-        display: block;
         width: 100% !important;
-        margin: 35px 0 !important;
     }
 
-    .cv-image {
-        display: block;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .cv-image img {
-        display: block;
+    .cv-page .cv-image img {
         width: 100% !important;
         height: auto !important;
-        max-width: 100%;
     }
 
-    .cv-image-caption {
-        display: flex;
-        justify-content: space-between;
-        gap: 15px;
-        width: 100%;
-        padding-top: 8px;
-        font-size: .7rem;
-    }
-
-
-    /* -----------------------------------------------------
-       DOWNLOADS
-       ----------------------------------------------------- */
-
-    .cv-downloads {
-        display: block;
-        width: 100%;
-        padding: 50px 0;
-    }
-
-    .cv-downloads-content {
-        display: block;
-        width: 100%;
-        margin: 30px 0 0;
-    }
-
-    .cv-downloads-content h2 {
-        width: 100%;
-        font-size: clamp(2.4rem, 10vw, 4rem);
-        line-height: .95;
-    }
-
-    .cv-downloads-content p {
-        width: 100%;
-        font-size: .95rem;
-        line-height: 1.6;
-    }
-
-    .cv-download-links {
+    /* DOWNLOADS */
+    .cv-page .cv-download-links {
         display: flex !important;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        gap: 20px;
-    }
-
-    .cv-download-links .button,
-    .cv-download-links .text-link {
-        max-width: 100%;
-    }
-
-
-    /* -----------------------------------------------------
-       ACTIONS
-       ----------------------------------------------------- */
-
-    .cv-actions {
-        display: flex !important;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        gap: 20px;
-        padding-top: 40px;
-    }
-
-
-    /* -----------------------------------------------------
-       FOOTER
-       ----------------------------------------------------- */
-
-    .site-footer {
-        width: auto;
+        flex-direction: column !important;
+        align-items: flex-start !important;
     }
 
 }
+
