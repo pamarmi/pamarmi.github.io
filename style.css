@@ -1076,6 +1076,224 @@ text-align: justify;
     margin-bottom: 8px;
 }
 
+/* =========================================================
+   CV — MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    /* -----------------------------------------------------
+       CV INTRO
+       ----------------------------------------------------- */
+
+    .cv-page {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .cv-intro {
+        display: block;
+        padding: 50px 0 55px;
+    }
+
+    .cv-intro-heading {
+        margin-bottom: 40px;
+    }
+
+    .cv-intro-heading h1 {
+        font-size: clamp(3rem, 13vw, 5rem);
+        line-height: .92;
+    }
+
+    .cv-intro-text {
+        width: 100%;
+    }
+
+    .cv-intro-text p {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+
+    /* -----------------------------------------------------
+       CV SECTIONS
+       ----------------------------------------------------- */
+
+    .cv-section,
+    .cv-section-reverse {
+        display: block;
+        padding: 55px 0;
+    }
+
+    .cv-section-reverse .cv-section-heading,
+    .cv-section-reverse .cv-section-content {
+        order: initial;
+    }
+
+    .cv-section-heading {
+        margin-bottom: 40px;
+    }
+
+    .cv-section-heading h2 {
+        font-size: clamp(2.5rem, 11vw, 4rem);
+        line-height: .95;
+    }
+
+    .cv-section-content {
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       EXPERIENCE / EDUCATION
+       ----------------------------------------------------- */
+
+    .cv-entry {
+        width: 100%;
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+    }
+
+    .cv-entry-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        margin-bottom: 14px;
+    }
+
+    .cv-entry h3 {
+        font-size: 1.3rem;
+    }
+
+    .cv-entry p {
+        font-size: .98rem;
+    }
+
+
+    /* -----------------------------------------------------
+       SKILLS
+       ----------------------------------------------------- */
+
+    .cv-skill {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+
+    .cv-skill h3 {
+        font-size: 1.25rem;
+    }
+
+
+    /* -----------------------------------------------------
+       TECHNICAL TOOLKIT
+       ----------------------------------------------------- */
+
+    .cv-toolkit {
+        display: block;
+    }
+
+    .cv-toolkit > div {
+        margin-bottom: 32px;
+    }
+
+    .cv-toolkit > div:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* -----------------------------------------------------
+       SELECTED EXPERIENCE
+       ----------------------------------------------------- */
+
+    .cv-section-wide .cv-list {
+        display: block;
+    }
+
+    .cv-section-wide .cv-list-item {
+        width: 100%;
+        padding: 22px 0 25px;
+    }
+
+
+    /* -----------------------------------------------------
+       LANGUAGES
+       ----------------------------------------------------- */
+
+    .cv-languages {
+        width: 100%;
+    }
+
+    .cv-languages p {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 15px 0;
+    }
+
+
+    /* -----------------------------------------------------
+       IMAGES
+       ----------------------------------------------------- */
+
+    .cv-image-block,
+    .cv-image-block-right {
+        width: 100%;
+        margin: 35px 0;
+    }
+
+    .cv-image {
+        width: 100%;
+    }
+
+    .cv-image img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* -----------------------------------------------------
+       DOWNLOADS
+       ----------------------------------------------------- */
+
+    .cv-downloads {
+        padding: 55px 0 50px;
+    }
+
+    .cv-downloads-content {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .cv-downloads-content h2 {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+
+    .cv-downloads-content p {
+        font-size: 1rem;
+    }
+
+    .cv-download-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+
+    /* -----------------------------------------------------
+       ACTIONS
+       ----------------------------------------------------- */
+
+    .cv-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        padding-top: 45px;
+    }
+
+}
+
 .cv-section-wide .cv-list-item span {
     display: block;
     color: #555;
