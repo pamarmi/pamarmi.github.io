@@ -1076,11 +1076,6 @@ text-align: justify;
     margin-bottom: 8px;
 }
 
-.cv-section-wide .cv-list-item span {
-    display: block;
-    color: #555;
-}
-
 /* =========================================================
    CV — MOBILE: SINGLE COLUMN ONLY
    ========================================================= */
@@ -1295,4 +1290,216 @@ text-align: justify;
     }
 
 }
+
+
+/* =========================================================
+   CV — MOBILE: SINGLE COLUMN ONLY
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+    /* -----------------------------------------------------
+       GLOBAL CV CONTAINERS
+       ----------------------------------------------------- */
+
+    .cv-page,
+    .cv-page section,
+    .cv-page div {
+        max-width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       INTRO
+       ----------------------------------------------------- */
+
+    .cv-intro {
+        display: block !important;
+        grid-template-columns: none !important;
+        width: 100% !important;
+    }
+
+    .cv-intro-heading,
+    .cv-intro-text {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .cv-intro-heading {
+        margin-bottom: 40px;
+    }
+
+
+    /* -----------------------------------------------------
+       CV SECTIONS
+       ----------------------------------------------------- */
+
+    .cv-section,
+    .cv-section-reverse,
+    .cv-section-wide {
+        display: block !important;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+        width: 100% !important;
+    }
+
+    .cv-section-heading,
+    .cv-section-content {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .cv-section-heading {
+        margin-bottom: 40px;
+    }
+
+    .cv-section-reverse .cv-section-heading,
+    .cv-section-reverse .cv-section-content {
+        order: initial !important;
+    }
+
+
+    /* -----------------------------------------------------
+       EXPERIENCE / EDUCATION
+       ----------------------------------------------------- */
+
+    .cv-entry {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cv-entry-meta {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cv-entry-meta span {
+        display: block !important;
+        width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       SKILLS
+       ----------------------------------------------------- */
+
+    .cv-skill {
+        display: block !important;
+        width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       TECHNICAL TOOLKIT
+       ----------------------------------------------------- */
+
+    .cv-toolkit {
+        display: block !important;
+        grid-template-columns: none !important;
+        width: 100% !important;
+    }
+
+    .cv-toolkit > div {
+        display: block !important;
+        width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       SELECTED EXPERIENCE
+       ----------------------------------------------------- */
+
+    .cv-list {
+        display: block !important;
+        grid-template-columns: none !important;
+        width: 100% !important;
+    }
+
+    .cv-list-item {
+        display: block !important;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+        width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       LANGUAGES
+       ----------------------------------------------------- */
+
+    .cv-languages {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cv-languages p {
+        display: block !important;
+        grid-template-columns: none !important;
+        width: 100% !important;
+    }
+
+    .cv-languages strong,
+    .cv-languages span {
+        display: block !important;
+        width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       IMAGES
+       ----------------------------------------------------- */
+
+    .cv-image-block,
+    .cv-image-block-right,
+    .cv-image {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .cv-image img {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+
+    /* -----------------------------------------------------
+       DOWNLOADS
+       ----------------------------------------------------- */
+
+    .cv-downloads,
+    .cv-downloads-content {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .cv-download-links {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cv-download-links > * {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+
+    /* -----------------------------------------------------
+       ACTIONS
+       ----------------------------------------------------- */
+
+    .cv-actions > * {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+}
+
 
