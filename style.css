@@ -1503,10 +1503,10 @@ text-align: justify;
 }
 
 /* =========================================================
-   MY SCIENCE 4 ALL
+   MY SCIENCE 4 ALL — FINAL
    ========================================================= */
 
-.science-intro {
+main .science-intro {
     padding: 60px 0 100px;
     border-bottom: 1px solid #cfcfc8;
 
@@ -1515,25 +1515,25 @@ text-align: justify;
     gap: 5vw;
 }
 
-.science-intro-label {
+main .science-intro-label {
     color: #777;
     font-size: .85rem;
     text-transform: uppercase;
     letter-spacing: .08em;
 }
 
-.science-intro-label span {
+main .science-intro-label span {
     display: block;
     margin-bottom: 18px;
     color: #aaa;
     font-size: .8rem;
 }
 
-.science-intro-content {
+main .science-intro-content {
     max-width: 900px;
 }
 
-.science-intro-content h1 {
+main .science-intro-content h1 {
     margin: 0;
     font-size: clamp(4rem, 8vw, 8rem);
     line-height: .88;
@@ -1541,25 +1541,21 @@ text-align: justify;
     font-weight: 500;
 }
 
-.science-intro-lead {
+main .science-intro-lead {
     max-width: 760px;
     margin: 45px 0 35px;
-
     font-size: clamp(1.5rem, 2.5vw, 2.4rem);
     line-height: 1.2;
     letter-spacing: -.025em;
-
     color: #333;
 }
 
-.science-intro-text {
+main .science-intro-text {
     max-width: 680px;
     margin-bottom: 20px;
-
     color: #666;
     font-size: 1.05rem;
     line-height: 1.7;
-
     text-align: justify;
 }
 
@@ -1568,11 +1564,11 @@ text-align: justify;
    STORIES
    ========================================================= */
 
-.science-stories {
+main .science-stories {
     border-bottom: 1px solid #cfcfc8;
 }
 
-.science-story {
+main .science-story {
     display: grid;
     grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
     gap: 5vw;
@@ -1582,34 +1578,31 @@ text-align: justify;
     border-bottom: 1px solid #cfcfc8;
 }
 
-.science-story:last-child {
+main .science-story:last-child {
     border-bottom: none;
 }
 
 
-/* =========================================================
-   ALTERNATING STORIES
-   ========================================================= */
+/* SECOND STORY — RIGHT ALIGNED */
 
-.science-story-reverse {
+main .science-story-reverse {
     grid-template-columns: minmax(0, 1.35fr) minmax(180px, .65fr);
 }
 
-.science-story-reverse .science-story-number {
+main .science-story-reverse .science-story-number {
     order: 2;
     text-align: right;
 }
 
-.science-story-reverse .science-story-content {
+main .science-story-reverse .science-story-content {
     order: 1;
+    margin-left: auto;
 }
 
 
-/* =========================================================
-   NUMBER
-   ========================================================= */
+/* NUMBER */
 
-.science-story-number {
+main .science-story-number {
     color: #aaa;
     font-size: .9rem;
     letter-spacing: .03em;
@@ -1617,28 +1610,23 @@ text-align: justify;
 }
 
 
-/* =========================================================
-   CONTENT
-   ========================================================= */
+/* CONTENT */
 
-.science-story-content {
+main .science-story-content {
     width: 100%;
     max-width: 850px;
 }
 
-.science-story-type {
+main .science-story-type {
     margin-bottom: 22px;
-
     color: #888;
-
     font-size: .8rem;
     text-transform: uppercase;
     letter-spacing: .09em;
 }
 
-.science-story-content h2 {
+main .science-story-content h2 {
     max-width: 850px;
-
     margin: 0 0 35px;
 
     font-size: clamp(3rem, 5.5vw, 6rem);
@@ -1647,14 +1635,13 @@ text-align: justify;
     font-weight: 500;
 }
 
-.science-story-content h2 span {
+main .science-story-content h2 span {
     display: block;
     color: #777;
 }
 
-.science-story-content p {
+main .science-story-content p {
     max-width: 680px;
-
     margin: 0 0 20px;
 
     color: #666;
@@ -1667,16 +1654,15 @@ text-align: justify;
 
 
 /* =========================================================
-   LINK
+   LINKS
    ========================================================= */
 
-.science-story-link {
+main .science-story-link {
     display: inline-flex;
     align-items: center;
     gap: 10px;
 
     margin-top: 20px;
-
     padding-bottom: 5px;
 
     border-bottom: 1px solid #999;
@@ -1684,26 +1670,25 @@ text-align: justify;
     font-size: .9rem;
 }
 
-.science-story-link span {
+main .science-story-link span {
     transition: transform .2s ease;
 }
 
-.science-story-link:hover {
+main .science-story-link:hover {
     border-color: #171717;
 }
 
-.science-story-link:hover span {
+main .science-story-link:hover span {
     transform: translate(3px, -3px);
 }
 
 
 /* =========================================================
-   STORY IMAGES
+   IMAGES
    ========================================================= */
 
-.science-story-image {
+main .science-story-image {
     width: min(100%, 650px);
-
     aspect-ratio: 16 / 9;
 
     margin: 38px 0 0;
@@ -1713,7 +1698,7 @@ text-align: justify;
     background: #e8e7e1;
 }
 
-.science-story-image img {
+main .science-story-image img {
     width: 100%;
     height: 100%;
 
@@ -1721,7 +1706,7 @@ text-align: justify;
 
     object-fit: cover;
 
-    /* Initially black and white */
+    /* START BLACK & WHITE */
     filter: grayscale(100%);
 
     transition:
@@ -1730,11 +1715,9 @@ text-align: justify;
 }
 
 
-/* =========================================================
-   IMAGE HOVER — BLACK & WHITE TO COLOR
-   ========================================================= */
+/* TURN INTO COLOR */
 
-.science-story-image:hover img {
+main .science-story-image:hover img {
     filter: grayscale(0%);
     transform: scale(1.025);
 }
@@ -1744,7 +1727,7 @@ text-align: justify;
    COMING SOON
    ========================================================= */
 
-.science-story-future {
+main .science-story-future {
     background: #eeede7;
 
     margin-left: -6vw;
@@ -1754,7 +1737,7 @@ text-align: justify;
     padding-right: 6vw;
 }
 
-.science-story-coming {
+main .science-story-coming {
     display: inline-block;
 
     margin-top: 20px;
@@ -1770,7 +1753,7 @@ text-align: justify;
    CLOSING
    ========================================================= */
 
-.science-closing {
+main .science-closing {
     padding: 120px 0 140px;
 
     display: grid;
@@ -1778,7 +1761,7 @@ text-align: justify;
     gap: 5vw;
 }
 
-.science-closing-label {
+main .science-closing-label {
     color: #888;
 
     font-size: .8rem;
@@ -1786,7 +1769,7 @@ text-align: justify;
     letter-spacing: .09em;
 }
 
-.science-closing h2 {
+main .science-closing h2 {
     margin: 0;
 
     font-size: clamp(3.5rem, 7vw, 7rem);
@@ -1802,72 +1785,73 @@ text-align: justify;
 
 @media (max-width: 800px) {
 
-    .science-intro {
+    main .science-intro {
         display: block;
         padding: 60px 0 70px;
     }
 
-    .science-intro-label {
+    main .science-intro-label {
         margin-bottom: 45px;
     }
 
-    .science-intro-content h1 {
+    main .science-intro-content h1 {
         font-size: clamp(3.5rem, 15vw, 6rem);
     }
 
-    .science-intro-lead {
+    main .science-intro-lead {
         margin-top: 35px;
         font-size: 1.5rem;
     }
 
-    .science-intro-text {
+    main .science-intro-text {
         text-align: left;
     }
 
 
-    /* STORIES */
-
-    .science-story,
-    .science-story-reverse {
+    main .science-story,
+    main .science-story-reverse {
         display: block;
+
         padding: 60px 0;
+
         direction: ltr;
     }
 
-    .science-story-number,
-    .science-story-reverse .science-story-number {
+    main .science-story-number,
+    main .science-story-reverse .science-story-number {
         order: initial;
+
         margin-bottom: 30px;
+
         text-align: left;
     }
 
-    .science-story-content,
-    .science-story-reverse .science-story-content {
+    main .science-story-content,
+    main .science-story-reverse .science-story-content {
         order: initial;
+
+        margin-left: 0;
     }
 
-    .science-story-content h2 {
+    main .science-story-content h2 {
         font-size: clamp(2.8rem, 12vw, 5rem);
         margin-bottom: 30px;
     }
 
-    .science-story-content p {
+    main .science-story-content p {
         text-align: left;
     }
 
 
-    /* IMAGES */
-
-    .science-story-image {
+    main .science-story-image {
         width: 100%;
         aspect-ratio: 16 / 9;
+
         margin-top: 30px;
     }
 
 
-    /* COMING SOON */
-
-    .science-story-future {
+    main .science-story-future {
         margin-left: -7vw;
         margin-right: -7vw;
 
@@ -1876,18 +1860,17 @@ text-align: justify;
     }
 
 
-    /* CLOSING */
-
-    .science-closing {
+    main .science-closing {
         display: block;
+
         padding: 80px 0 100px;
     }
 
-    .science-closing-label {
+    main .science-closing-label {
         margin-bottom: 40px;
     }
 
-    .science-closing h2 {
+    main .science-closing h2 {
         font-size: clamp(3.5rem, 14vw, 6rem);
     }
 
