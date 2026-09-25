@@ -561,7 +561,7 @@ main {
     letter-spacing: -0.065em;
     font-weight: 500;
     padding-bottom: 25px;
-    border-bottom: 0x solid #171717;
+    border-bottom: none;
 }
 
 /* =========================================================
@@ -1498,6 +1498,402 @@ text-align: justify;
     .cv-actions > * {
         display: inline-block;
         margin-bottom: 20px;
+    }
+
+}
+
+/* =========================================================
+   MY SCIENCE 4 ALL
+   ========================================================= */
+
+.science-intro {
+    padding: 60px 0 100px;
+    border-bottom: 1px solid #cfcfc8;
+
+    display: grid;
+    grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
+    gap: 5vw;
+}
+
+.science-intro-label {
+    color: #777;
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.science-intro-label span {
+    display: block;
+    margin-bottom: 18px;
+    color: #aaa;
+    font-size: .8rem;
+}
+
+.science-intro-content {
+    max-width: 900px;
+}
+
+.science-intro-content h1 {
+    margin: 0;
+
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: .88;
+    letter-spacing: -.07em;
+    font-weight: 500;
+}
+
+.science-intro-lead {
+    max-width: 760px;
+
+    margin: 45px 0 35px;
+
+    font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+    line-height: 1.2;
+    letter-spacing: -.025em;
+
+    color: #333;
+}
+
+.science-intro-text {
+    max-width: 680px;
+
+    margin-bottom: 20px;
+
+    color: #666;
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   STORIES
+   ========================================================= */
+
+.science-stories {
+    border-bottom: 1px solid #cfcfc8;
+}
+
+.science-story {
+    display: grid;
+    grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
+    gap: 5vw;
+
+    padding: 85px 0;
+
+    border-bottom: 1px solid #cfcfc8;
+}
+
+.science-story:last-child {
+    border-bottom: none;
+}
+
+
+/* Alternate the visual direction */
+
+.science-story-reverse {
+    grid-template-columns: minmax(0, 1.35fr) minmax(180px, .65fr);
+}
+
+.science-story-reverse .science-story-number {
+    order: 2;
+}
+
+.science-story-reverse .science-story-content {
+    order: 1;
+}
+
+
+/* Number */
+
+.science-story-number {
+    color: #aaa;
+
+    font-size: .9rem;
+    letter-spacing: .03em;
+
+    padding-top: 5px;
+}
+
+
+/* Main content */
+
+.science-story-content {
+    max-width: 850px;
+}
+
+.science-story-type {
+    margin-bottom: 22px;
+
+    color: #888;
+
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+}
+
+.science-story-content h2 {
+    max-width: 850px;
+
+    margin: 0 0 35px;
+
+    font-size: clamp(3rem, 5.5vw, 6rem);
+    line-height: .91;
+    letter-spacing: -.06em;
+    font-weight: 500;
+}
+
+.science-story-content h2 span {
+    display: block;
+    color: #777;
+}
+
+.science-story-content p {
+    max-width: 680px;
+
+    margin: 0 0 20px;
+
+    color: #666;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    text-align: justify;
+}
+
+
+/* Link */
+
+.science-story-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid #999;
+
+    font-size: .9rem;
+}
+
+.science-story-link span {
+    transition: transform .2s ease;
+}
+
+.science-story-link:hover {
+    border-color: #171717;
+}
+
+.science-story-link:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   COMING SOON STORY
+   ========================================================= */
+
+.science-story-future {
+    background: #eeede7;
+
+    margin-left: -6vw;
+    margin-right: -6vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+.science-story-coming {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #888;
+
+    font-size: .85rem;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.science-closing {
+    padding: 120px 0 140px;
+
+    display: grid;
+    grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
+    gap: 5vw;
+}
+
+.science-closing-label {
+    color: #888;
+
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+}
+
+.science-closing h2 {
+    margin: 0;
+
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    line-height: .9;
+    letter-spacing: -.065em;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .science-intro {
+        display: block;
+
+        padding: 60px 0 70px;
+    }
+
+    .science-intro-label {
+        margin-bottom: 45px;
+    }
+
+    .science-intro-content h1 {
+        font-size: clamp(3.5rem, 15vw, 6rem);
+    }
+
+    .science-intro-lead {
+        margin-top: 35px;
+
+        font-size: 1.5rem;
+    }
+
+    .science-intro-text {
+        text-align: left;
+    }
+
+
+    /* STORIES */
+
+    .science-story,
+    {
+        display: block;
+
+        padding: 60px 0;
+
+        direction: ltr;
+    }
+
+    .science-story-number,
+    .science-story-reverse .science-story-number {
+        order: initial;
+
+        margin-bottom: 30px;
+    }
+
+    .science-story-content,
+    .science-story-reverse .science-story-content {
+        order: initial;
+    }
+
+    .science-story-content h2 {
+        font-size: clamp(2.8rem, 12vw, 5rem);
+
+        margin-bottom: 30px;
+    }
+
+    .science-story-content p {
+        text-align: left;
+    }
+.science-story-reverse {
+    grid-template-columns: minmax(0, 1.35fr) minmax(180px, .65fr);
+}
+
+.science-story-reverse .science-story-number {
+    order: 2;
+    text-align: right;
+}
+
+.science-story-reverse .science-story-content {
+    order: 1;
+}
+
+
+    /* COMING SOON */
+
+    .science-story-future {
+        margin-left: -7vw;
+        margin-right: -7vw;
+
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+
+    /* CLOSING */
+
+    .science-closing {
+        display: block;
+
+        padding: 80px 0 100px;
+    }
+
+    .science-closing-label {
+        margin-bottom: 40px;
+    }
+
+    .science-closing h2 {
+        font-size: clamp(3.5rem, 14vw, 6rem);
+    }
+
+}
+
+/* =========================================================
+   STORY IMAGES
+   ========================================================= */
+
+.science-story-image {
+    width: min(100%, 650px);
+    aspect-ratio: 16 / 9;
+    margin: 38px 0 0;
+    overflow: hidden;
+    background: #e8e7e1;
+}
+
+.science-story-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    /* Initially black & white */
+    filter: grayscale(100%);
+
+    transition:
+        filter 0.5s ease,
+        transform 0.5s ease;
+}
+
+/* Become color when hovering the image */
+.science-story-image:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.025);
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .science-story-image {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        margin-top: 30px;
     }
 
 }
