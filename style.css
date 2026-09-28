@@ -1,1891 +1,56 @@
 /* =========================================================
-RESET
+   RESET
 ========================================================= */
 
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-background: #f5f4ef;
-color: #171717;
-font-family: Arial, Helvetica, sans-serif;
-line-height: 1.6;
+    background: #f5f4ef;
+    color: #171717;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
 a {
-color: inherit;
-text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 img {
-max-width: 100%;
-display: block;
+    max-width: 100%;
+    display: block;
 }
 
+
 /* =========================================================
-LAYOUT
+   LAYOUT
 ========================================================= */
 
 body {
-max-width: 1400px;
-margin: 0 auto;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 main {
-padding: 0 6vw;
+    padding: 0 6vw;
 }
 
 .section {
-padding: 90px 0;
-}
-
-/* =========================================================
-HEADER / NAVIGATION
-========================================================= */
-
-.site-header {
-padding: 30px 6vw;
-}
-
-.nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-border-bottom: 1px solid #cfcfc8;
-padding-bottom: 20px;
-}
-
-.nav-name {
-font-weight: 700;
-font-size: 1rem;
-letter-spacing: -0.02em;
-}
-
-.nav-links {
-display: flex;
-gap: 30px;
-font-size: 0.9rem;
-}
-
-.nav-links a {
-color: #555;
-transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-color: #111;
-}
-
-/* =========================================================
-HERO
-========================================================= */
-
-.hero {
-min-height: 78vh;
-display: grid;
-grid-template-columns: minmax(0, 1fr) 240px;
-grid-template-rows: auto 1fr;
-column-gap: 70px;
-align-items: center;
-padding: 10px 0 120px;
-border-bottom: 1px solid #cfcfc8;
-}
-
-.eyebrow {
-grid-column: 1 / -1;
-width: 100%;
-margin-bottom: 30px;
-font-size: 0.85rem;
-text-transform: uppercase;
-letter-spacing: 0.12em;
-color: #777;
-text-align: center;
-}
-
-.hero-text {
-width: 100%;
-max-width: 850px;
-margin-left: auto;
-}
-
-.hero h1 {
-width: 100%;
-max-width: none;
-font-size: clamp(3.1rem, 6.5vw, 6.5rem);
-line-height: 0.98;
-letter-spacing: -0.065em;
-font-weight: 600;
-text-align: right;
-}
-
-.hero-description {
-width: 100%;
-max-width: none;
-margin-top: 40px;
-font-size: 1.15rem;
-color: #555;
-line-height: 1.7;
-text-align: justify;
-}
-
-.hero-links {
-display: flex;
-align-items: center;
-gap: 28px;
-margin-top: 45px;
-}
-
-.button {
-background: #171717;
-color: #fff;
-padding: 13px 24px;
-border-radius: 2px;
-font-size: 0.9rem;
-transition: background 0.2s ease;
-}
-
-.button:hover {
-background: #444;
-}
-
-.text-link {
-font-size: 0.9rem;
-border-bottom: 1px solid #999;
-padding-bottom: 3px;
-}
-
-.text-link:hover {
-border-color: #111;
-}
-
-/* =========================================================
-HERO — PHOTO / SIDE
-========================================================= */
-
-.hero-side {
-align-self: end;
-padding-bottom: 135px;
-}
-
-.hero-photo {
-width: 220px;
-height: 220px;
-margin-bottom: 65px;
-overflow: hidden;
-border-radius: 50%;
-position: relative;
-top: -15px;
-}
-
-.hero-photo img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-object-position: center;
-filter: grayscale(10%);
-}
-
-
-.hero-meta {
-display: flex;
-flex-wrap: wrap;
-gap: 8px 22px;
-margin-top: 25px;
-font-size: 0.8rem;
-color: #777;
-}
-
-.hero-meta a {
-color: #555;
-}
-
-.hero-meta a:hover {
-color: #111;
-}
-
-/* =========================================================
-SECTION LABELS
-========================================================= */
-
-.section-label {
-display: flex;
-gap: 20px;
-align-items: center;
-color: #777;
-text-transform: uppercase;
-letter-spacing: 0.1em;
-font-size: 0.95rem;
-margin-bottom: 20px;
-}
-
-.section-label span:first-child {
-color: #aaa;
-}
-
-/* =========================================================
-BACKGROUND
-========================================================= */
-
-.background {
-padding-bottom: 80px;
-}
-
-.background-content {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 100px;
-}
-
-.background-content h2 {
-font-size: clamp(2.5rem, 5vw, 5rem);
-line-height: 1;
-letter-spacing: -0.055em;
-font-weight: 500;
-}
-
-.background-content p {
-max-width: 600px;
-color: #666;
-margin-bottom: 25px;
-text-align:justify;
-}
-
-
-/* =========================================================
-PROJECTS
-========================================================= */
-.project-list {
-display: grid;
-grid-template-columns: 1fr 1fr;
-column-gap: 100px;
-row-gap: 0;
-border-top: 1px solid #cfcfc8;
-}
-
-.project {
-padding: 25px 0 40px;
-}
-
-.project:nth-child(3) {
-grid-column: 1;
-}
-
-.project-number {
-color: #999;
-font-size: 0.8rem;
-margin-bottom: 20px;
-}
-
-.project-content h2 {
-max-width: 520px;
-font-size: clamp(2rem, 3vw, 3.1rem);
-line-height: 0.98;
-letter-spacing: -0.045em;
-font-weight: 500;
-margin-bottom: 20px;
-}
-
-.project-content p {
-max-width: 600px;
-color: #666;
-margin-bottom: 12px;
-text-align: justify;
-}
-
-.tags {
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
-margin-top: 20px;
-}
-
-.tags span {
-border: 1px solid #ccc;
-border-radius: 100px;
-padding: 5px 11px;
-font-size: 0.75rem;
-color: #666;
-}
-
-/* =========================================================
-CONTACT
-========================================================= */
-
-.contact {
-border-top: 1px solid #cfcfc8;
-}
-
-.contact-content {
-max-width: 850px;
-}
-
-.contact-content h2 {
-font-size: clamp(3rem, 6vw, 6rem);
-line-height: 0.95;
-letter-spacing: -0.06em;
-font-weight: 500;
-}
-
-.contact-content p {
-max-width: 600px;
-margin-top: 35px;
-color: #666;
-font-size: 1.1rem;
-text-align: justify;
-}
-
-.email-link {
-display: inline-block;
-
-margin-top: 35px;
-
-font-size: 1.2rem;
-
-border-bottom: 1px solid #999;
-
-padding-bottom: 5px;
-
-
-}
-
-/* =========================================================
-FOOTER
-========================================================= */
-
-.site-footer {
-margin: 0 6vw;
-
-padding: 30px 0 40px;
-
-border-top: 1px solid #cfcfc8;
-
-display: flex;
-justify-content: space-between;
-
-color: #888;
-
-font-size: 0.8rem;
-
-
-}
-
-.site-footer div {
-display: flex;
-gap: 20px;
-}
-
-.site-footer a:hover {
-color: #111;
-}
-
-/* =========================================================
-MOBILE
-========================================================= */
-
-@media (max-width: 800px) {
-
-html,
-body {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-main {
-    padding: 0 7vw;
-}
-
-.site-header {
-    padding: 25px 7vw;
-}
-
-.nav {
-    align-items: flex-start;
-}
-
-.nav-links {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
-
-
-/* HERO */
-
-.hero {
-    grid-template-columns: 1fr;
-
-    gap: 50px;
-
-    min-height: auto;
-
-    padding: 80px 0 90px;
-}
-
-.hero h1 {
-    font-size: clamp(3rem, 13vw, 5rem);
-}
-
-.hero-description {
-    text-align: left;
-}
-
-.hero-side {
-    align-self: auto;
-}
-
-.hero-photo {
-    width: 170px;
-    height: 170px;
-
-    margin-bottom: 25px;
-
-    top: 0;
-}
-
-.social-links {
-    flex-direction: row;
-
-    flex-wrap: wrap;
-
-    gap: 15px 25px;
-}
-
-
-/* SECTIONS */
-
-.section {
-    padding: 60px 0;
-}
-
-
-/* CAPABILITIES */
-
-.capability-grid {
-    grid-template-columns: 1fr;
-}
-
-.capability,
-.capability:nth-child(even) {
-    padding: 35px 0;
-
-    border-left: none;
-}
-
-
-/* BACKGROUND */
-
-.background-content {
-    grid-template-columns: 1fr;
-    gap: 50px;
-}
-
-
-/* PROJECTS */
-
-.project-list {
-    grid-template-columns: 1fr;
-
-    column-gap: 0;
-}
-
-.project:nth-child(2) {
-    border-left: none;
-
-    padding-left: 0;
-}
-
-.project:nth-child(3) {
-    grid-column: auto;
-
-    padding-top: 35px;
-}
-
-.project-content h2 {
-    font-size: 2.2rem;
-}
-
-
-/* FOOTER */
-
-.site-footer {
-    margin: 0 7vw;
-
-    flex-direction: column;
-
-    gap: 15px;
-}
-
-
-}
-
-
-
-/* =========================================================
-   BACKGROUND PAGE
-   ========================================================= */
-
-.background-page {
-    padding-top: 10px;
-    padding-bottom: 80px;
-}
-
-
-.background-intro {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.background-intro-image {
-    width: 100%;
-
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-
-.background-intro-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    opacity: 1;
-}
-
-.background-intro h1 {
-    width: 100%;
-    margin: 0;
-    text-align: right;
-    font-size: clamp(3.5rem, 7vw, 7rem);
-    line-height: 0.95;
-    letter-spacing: -0.065em;
-    font-weight: 500;
-    padding-bottom: 25px;
-    border-bottom: none;
-}
-
-/* =========================================================
-   BACKGROUND STORY
-   ========================================================= */
-
-.background-story {
-    border-top: 1px solid #cfcfc8;
-}
-
-.background-block {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 8vw;
-
-    padding: 75px 0;
-
-    border-bottom: 1px solid #cfcfc8;
-
-    align-items: start;
-}
-
-
-/* Alternate direction */
-
-.background-block-reverse {
-    direction: rtl;
-}
-
-.background-block-reverse > * {
-    direction: ltr;
-}
-
-
-/* =========================================================
-   HEADING
-   ========================================================= */
-
-.background-heading {
-    max-width: 520px;
-}
-
-.background-number {
-    display: block;
-
-    color: #999;
-
-    font-size: 0.9rem;
-
-    margin-bottom: 22px;
-}
-
-.background-heading h2 {
-    font-size: clamp(2.5rem, 4vw, 4.5rem);
-
-    line-height: 0.95;
-
-    letter-spacing: -0.055em;
-
-    font-weight: 500;
-}
-
-
-/* =========================================================
-   TEXT
-   ========================================================= */
-
-.background-page-content {
-    max-width: 650px;
-}
-
-.background-page-content p {
-    color: #666;
-
-    margin-bottom: 20px;
-
-    text-align: justify;
-}
-
-.background-page-content p:last-child {
-    margin-bottom: 0;
-}
-
-.background-closing {
-    color: #171717 !important;
-    font-size: 1.05rem;
-    margin-top: 0px;
-}
-.background-lead{
-width: 100%;
-max-width: none;
-margin-top: 40px;
-font-size: 1.15rem;
-color: #555;
-line-height: 1.7;
-text-align: justify;
-}
-
-/* =========================================================
-   ACTIONS
-   ========================================================= */
-
-.background-actions {
-    display: flex;
-
-    align-items: center;
-
-    gap: 28px;
-
-    margin-top: 50px;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-    .background-page {
-        padding-top: 50px;
-        padding-bottom: 60px;
-    }
-
-    .background-intro {
-        margin-bottom: 60px;
-    }
-
-    .background-intro h1 {
-        font-size: clamp(3rem, 12vw, 5rem);
-    }
-
-    .background-block,
-    .background-block-reverse {
-        display: block;
-
-        padding: 50px 0;
-
-        direction: ltr;
-    }
-
-    .background-heading {
-        margin-bottom: 35px;
-    }
-
-    .background-heading h2 {
-        font-size: 2.8rem;
-    }
-
-    .background-page-content p {
-        text-align: left;
-    }
-
-    .background-actions {
-        flex-wrap: wrap;
-        margin-top: 35px;
-    }
-}
-
-/* =========================================================
-   CV PAGE
-   ========================================================= */
-
-.cv-page {
-    padding-top: 10px;
-    padding-bottom: 80px;
-}
-
-
-/* ---------------------------------------------------------
-   INTRO
-   --------------------------------------------------------- */
-
-
-.cv-intro {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-    gap: 7vw;
-    padding: 60px 0 75px;
-    border-bottom: 1px solid #cfcfc8;
-}
-
-.cv-intro-heading h1 {
-    margin: 0;
-    font-size: clamp(4rem, 7vw, 7rem);
-    line-height: .92;
-    letter-spacing: -.065em;
-    font-weight: 500;
-}
-
-.cv-intro-text {
-    align-self: end;
-}
-
-.cv-intro-text p {
-    margin: 0 0 22px;
-    color: #555;
-    font-size: 1.08rem;
-    line-height: 1.65;
-}
-
-.cv-intro-text p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* ---------------------------------------------------------
-   CV SECTIONS
-   --------------------------------------------------------- */
-
-.cv-section {
-    display: grid;
-    grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr);
-    column-gap: 5vw;
-    padding: 60px 0;
-    border-bottom: 1px solid #cfcfc8;
-}
-
-.cv-section-reverse {
-    grid-template-columns: minmax(0, 1.3fr) minmax(220px, .7fr);
-}
-
-.cv-section-reverse .cv-section-heading {
-    order: 2;
-}
-
-.cv-section-reverse .cv-section-content {
-    order: 1;
-}
-
-.cv-section-heading {
-    position: relative;
-    align-self: start;
-}
-
-.cv-number {
-    display: block;
-    margin-bottom: 18px;
-    font-size: .8rem;
-    color: #777;
-    letter-spacing: .03em;
-}
-
-.cv-section-heading h2 {
-    margin: 0;
-    font-size: clamp(2.5rem, 4vw, 4.2rem);
-    line-height: .95;
-    letter-spacing: -.055em;
-    font-weight: 500;
-}
-
-
-/* ---------------------------------------------------------
-   ENTRIES
-   --------------------------------------------------------- */
-
-.cv-entry {
-    padding: 0 0 38px;
-    margin-bottom: 38px;
-    border-bottom: 1px solid #deded8;
-}
-
-.cv-entry:last-child {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border-bottom: none;
-}
-
-.cv-entry-meta {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 12px;
-    color: #777;
-    font-size: .85rem;
-}
-
-.cv-entry h3,
-.cv-skill h3,
-.cv-toolkit h3 {
-    margin: 0 0 8px;
-    font-size: 1.35rem;
-    line-height: 1.2;
-    font-weight: 600;
-}
-
-.cv-entry-place {
-    margin: 0 0 18px;
-    color: #555;
-    font-style: italic;
-}
-
-.cv-entry p:last-child {
-    margin-bottom: 0;
-}
-
-.cv-entry p {
-    color: #555;
-}
-
-
-/* ---------------------------------------------------------
-   SKILLS
-   --------------------------------------------------------- */
-
-.cv-skill {
-    padding: 0 0 25px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #deded8;
-}
-
-.cv-skill:last-child {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border-bottom: none;
-}
-
-.cv-skill p {
-    margin: 0;
-    color: #555;
-}
-
-
-/* ---------------------------------------------------------
-   TECHNICAL TOOLKIT
-   --------------------------------------------------------- */
-
-.cv-toolkit {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 55px 50px;
-}
-
-.cv-toolkit h3 {
-    margin-bottom: 10px;
-}
-
-.cv-toolkit p {
-    margin: 0;
-    color: #555;
-}
-
-
-/* ---------------------------------------------------------
-   SELECTED EXPERIENCE LIST
-   --------------------------------------------------------- */
-
-.cv-list {
-    border-top: 1px solid #deded8;
-}
-
-.cv-list-item {
-    display: grid;
-    grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
-    gap: 40px;
-    padding: 25px 0;
-    border-bottom: 1px solid #deded8;
-}
-
-.cv-list-item strong {
-    font-weight: 600;
-}
-
-.cv-list-item span {
-    color: #555;
-}
-
-
-/* ---------------------------------------------------------
-   LANGUAGES
-   --------------------------------------------------------- */
-
-.cv-languages {
-    max-width: 700px;
-}
-
-.cv-languages p {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 30px;
-    padding: 16px 0;
-    margin: 0;
-    border-bottom: 1px solid #deded8;
-}
-
-.cv-languages p:first-child {
-    border-top: 1px solid #deded8;
-}
-
-.cv-languages span {
-    color: #555;
-}
-
-
-/* ---------------------------------------------------------
-   PRESENTATION IMAGES
-   --------------------------------------------------------- */
-
-.cv-image-block {
-    width: 100%;
-    margin: 10px 0 35px auto;
-}
-
-.cv-image-block-right {
-    margin-left: auto;
-    margin-right: 0;
-}
-
-.cv-image {
-    width: 100%;
-    overflow: hidden;
-}
-
-.cv-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.cv-image-caption {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 8px;
-    color: #777;
-    font-size: .75rem;
-}
-
-
-
-
-/* ---------------------------------------------------------
-   DOWNLOADS
-   --------------------------------------------------------- */
-
-.cv-downloads {
-    padding: 70px 0 60px;
-    border-bottom: 1px solid #cfcfc8;
-}
-
-.cv-downloads-content {
-    width: min(850px, 100%);
-    margin-left: auto;
-    margin-top: 35px;
-}
-
-.cv-downloads-content h2 {
-    margin: 0 0 18px;
-    font-size: clamp(2.8rem, 5vw, 5rem);
-    line-height: .95;
-    letter-spacing: -.055em;
-    font-weight: 500;
-}
-
-.cv-downloads-content p {
-    max-width: 650px;
-    margin-bottom: 35px;
-    color: #555;
-    font-size: 1.05rem;
-}
-
-.cv-download-links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-
-/* ---------------------------------------------------------
-   ACTIONS
-   --------------------------------------------------------- */
-
-.cv-actions {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    padding-top: 55px;
-}
-
-/* ---------------------------------------------------------
-   FULL-WIDTH EXPERIENCE
-   --------------------------------------------------------- */
-
-.cv-section-wide {
-    display: block;
-}
-
-.cv-section-wide .cv-section-heading {
-    margin-bottom: 45px;
-}
-
-.cv-section-wide .cv-section-content {
-    width: 100%;
-}
-
-.cv-section-wide .cv-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 7vw;
-    row-gap: 0;
-    border-top: 1px solid #deded8;
-}
-
-.cv-section-wide .cv-list-item {
-    display: block;
-    padding: 25px 0 28px;
-    border-bottom: 1px solid #deded8;
-}
-
-.cv-section-wide .cv-list-item strong {
-    display: block;
-    margin-bottom: 8px;
-}
-
-/* =========================================================
-   CV — MOBILE: SINGLE COLUMN ONLY
-   ========================================================= */
-
-@media screen and (max-width: 800px) {
-
-    /* -----------------------------------------------------
-       GLOBAL CV CONTAINERS
-       ----------------------------------------------------- */
-
-    .cv-page,
-    .cv-page section,
-    .cv-page div {
-        max-width: 100%;
-    }
-
-
-    /* -----------------------------------------------------
-       INTRO
-       ----------------------------------------------------- */
-
-    .cv-intro {
-        display: block !important;
-        grid-template-columns: none !important;
-        width: 100% !important;
-    }
-
-    .cv-intro-heading,
-    .cv-intro-text {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .cv-intro-heading {
-        margin-bottom: 40px;
-    }
-
-
-    /* -----------------------------------------------------
-       CV SECTIONS
-       ----------------------------------------------------- */
-
-    .cv-section,
-    .cv-section-reverse,
-    .cv-section-wide {
-        display: block !important;
-        grid-template-columns: none !important;
-        grid-template-rows: none !important;
-        width: 100% !important;
-    }
-
-    .cv-section-heading,
-    .cv-section-content {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        grid-column: auto !important;
-        grid-row: auto !important;
-    }
-
-    .cv-section-heading {
-        margin-bottom: 40px;
-    }
-
-    .cv-section-reverse .cv-section-heading,
-    .cv-section-reverse .cv-section-content {
-        order: initial !important;
-    }
-
-
-    /* -----------------------------------------------------
-       EXPERIENCE / EDUCATION
-       ----------------------------------------------------- */
-
-    .cv-entry {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    .cv-entry-meta {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    .cv-entry-meta span {
-        display: block !important;
-        width: 100% !important;
-    }
-
-
-    /* -----------------------------------------------------
-       SKILLS
-       ----------------------------------------------------- */
-
-    .cv-skill {
-        display: block !important;
-        width: 100% !important;
-    }
-
-
-    /* -----------------------------------------------------
-       TECHNICAL TOOLKIT
-       ----------------------------------------------------- */
-
-    .cv-toolkit {
-        display: block !important;
-        grid-template-columns: none !important;
-        width: 100% !important;
-    }
-
-    .cv-toolkit > div {
-        display: block !important;
-        width: 100% !important;
-    }
-
-
-    /* -----------------------------------------------------
-       SELECTED EXPERIENCE
-       ----------------------------------------------------- */
-
-    .cv-list {
-        display: block !important;
-        grid-template-columns: none !important;
-        width: 100% !important;
-    }
-
-    .cv-list-item {
-        display: block !important;
-        grid-template-columns: none !important;
-        grid-template-rows: none !important;
-        width: 100% !important;
-    }
-
-
-    /* -----------------------------------------------------
-       LANGUAGES
-       ----------------------------------------------------- */
-
-    .cv-languages {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    .cv-languages p {
-        display: block !important;
-        grid-template-columns: none !important;
-        width: 100% !important;
-    }
-
-    .cv-languages strong,
-    .cv-languages span {
-        display: block !important;
-        width: 100% !important;
-    }
-
-
-    /* -----------------------------------------------------
-       IMAGES
-       ----------------------------------------------------- */
-
-    .cv-image-block,
-    .cv-image-block-right,
-    .cv-image {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .cv-image img {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
-
-    /* -----------------------------------------------------
-       DOWNLOADS
-       ----------------------------------------------------- */
-
-    .cv-downloads,
-    .cv-downloads-content {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .cv-download-links {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    .cv-download-links > * {
-        display: inline-block;
-        margin-bottom: 20px;
-    }
-
-
-    /* -----------------------------------------------------
-       ACTIONS
-       ----------------------------------------------------- */
-
-    .cv-actions {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    .cv-actions > * {
-        display: inline-block;
-        margin-bottom: 20px;
-    }
-
-}
-
-
-/* =========================================================
-   CV — MOBILE: SINGLE COLUMN ONLY
-   ========================================================= */
-
-@media screen and (max-width: 800px) {
-
-    /* -----------------------------------------------------
-       GLOBAL CV CONTAINERS
-       ----------------------------------------------------- */
-
-    .cv-page,
-    .cv-page section,
-    .cv-page div {
-        max-width: 100%;
-    }
-
-
-    /* -----------------------------------------------------
-       INTRO
-       ----------------------------------------------------- */
-
-    .cv-intro {
-        display: block !important;
-        grid-template-columns: none !important;
-        width: 100% !important;
-    }
-
-    .cv-intro-heading,
-    .cv-intro-text {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .cv-intro-heading {
-        margin-bottom: 40px;
-    }
-
-
-    /* -----------------------------------------------------
-       CV SECTIONS
-       ----------------------------------------------------- */
-
-    .cv-section,
-    .cv-section-reverse,
-    .cv-section-wide {
-        display: block !important;
-        grid-template-columns: none !important;
-        grid-template-rows: none !important;
-        width: 100% !important;
-    }
-
-    .cv-section-heading,
-    .cv-section-content {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        grid-column: auto !important;
-        grid-row: auto !important;
-    }
-
-    .cv-section-heading {
-        margin-bottom: 40px;
-    }
-
-    .cv-section-reverse .cv-section-heading,
-    .cv-section-reverse .cv-section-content {
-        order: initial !important;
-    }
-
-
-    /* -----------------------------------------------------
-       EXPERIENCE / EDUCATION
-       ----------------------------------------------------- */
-
-    .cv-entry {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    .cv-entry-meta {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    .cv-entry-meta span {
-        display: block !important;
-        width: 100% !important;
-    }
-
-
-    /* -----------------------------------------------------
-       SKILLS
-       ----------------------------------------------------- */
-
-    .cv-skill {
-        display: block !important;
-        width: 100% !important;
-    }
-
-
-    /* -----------------------------------------------------
-       TECHNICAL TOOLKIT
-       ----------------------------------------------------- */
-
-    .cv-toolkit {
-        display: block !important;
-        grid-template-columns: none !important;
-        width: 100% !important;
-    }
-
-    .cv-toolkit > div {
-        display: block !important;
-        width: 100% !important;
-    }
-
-
-    /* -----------------------------------------------------
-       SELECTED EXPERIENCE
-       ----------------------------------------------------- */
-
-    .cv-list {
-        display: block !important;
-        grid-template-columns: none !important;
-        width: 100% !important;
-    }
-
-    .cv-list-item {
-        display: block !important;
-        grid-template-columns: none !important;
-        grid-template-rows: none !important;
-        width: 100% !important;
-    }
-
-
-    /* -----------------------------------------------------
-       LANGUAGES
-       ----------------------------------------------------- */
-
-    .cv-languages {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    .cv-languages p {
-        display: block !important;
-        grid-template-columns: none !important;
-        width: 100% !important;
-    }
-
-    .cv-languages strong,
-    .cv-languages span {
-        display: block !important;
-        width: 100% !important;
-    }
-
-
-    /* -----------------------------------------------------
-       IMAGES
-       ----------------------------------------------------- */
-
-    .cv-image-block,
-    .cv-image-block-right,
-    .cv-image {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .cv-image img {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
-
-    /* -----------------------------------------------------
-       DOWNLOADS
-       ----------------------------------------------------- */
-
-    .cv-downloads,
-    .cv-downloads-content {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .cv-download-links {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    .cv-download-links > * {
-        display: inline-block;
-        margin-bottom: 20px;
-    }
-
-
-    /* -----------------------------------------------------
-       ACTIONS
-       ----------------------------------------------------- */
-
-    .cv-actions > * {
-        display: inline-block;
-        margin-bottom: 20px;
-    }
-
-}
-
-/* =========================================================
-   MY SCIENCE 4 ALL — FINAL
-   ========================================================= */
-
-main .science-intro {
-    padding: 60px 0 100px;
-    border-bottom: 1px solid #cfcfc8;
-
-    display: grid;
-    grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
-    gap: 5vw;
-}
-
-main .science-intro-label {
-    color: #777;
-    font-size: .85rem;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-}
-
-main .science-intro-label span {
-    display: block;
-    margin-bottom: 18px;
-    color: #aaa;
-    font-size: .8rem;
-}
-
-main .science-intro-content {
-    max-width: 900px;
-}
-
-main .science-intro-content h1 {
-    margin: 0;
-    font-size: clamp(4rem, 8vw, 8rem);
-    line-height: .88;
-    letter-spacing: -.07em;
-    font-weight: 500;
-}
-
-main .science-intro-lead {
-    max-width: 760px;
-    margin: 45px 0 35px;
-    font-size: clamp(1.5rem, 2.5vw, 2.4rem);
-    line-height: 1.2;
-    letter-spacing: -.025em;
-    color: #333;
-}
-
-main .science-intro-text {
-    max-width: 680px;
-    margin-bottom: 20px;
-    color: #666;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    text-align: justify;
-}
-
-
-/* =========================================================
-   STORIES
-   ========================================================= */
-
-main .science-stories {
-    border-bottom: 1px solid #cfcfc8;
-}
-
-main .science-story {
-    display: grid;
-    grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
-    gap: 5vw;
-
-    padding: 85px 0;
-
-    border-bottom: 1px solid #cfcfc8;
-}
-
-main .science-story:last-child {
-    border-bottom: none;
-}
-
-
-/* SECOND STORY — RIGHT ALIGNED */
-
-main .science-story-reverse {
-    grid-template-columns: minmax(0, 1.35fr) minmax(180px, .65fr);
-}
-
-main .science-story-reverse .science-story-number {
-    order: 2;
-    text-align: right;
-}
-
-main .science-story-reverse .science-story-content {
-    order: 1;
-    margin-left: auto;
-}
-
-
-/* NUMBER */
-
-main .science-story-number {
-    color: #aaa;
-    font-size: .9rem;
-    letter-spacing: .03em;
-    padding-top: 5px;
-}
-
-
-/* CONTENT */
-
-main .science-story-content {
-    width: 100%;
-    max-width: 850px;
-}
-
-main .science-story-type {
-    margin-bottom: 22px;
-    color: #888;
-    font-size: .8rem;
-    text-transform: uppercase;
-    letter-spacing: .09em;
-}
-
-main .science-story-content h2 {
-    max-width: 850px;
-    margin: 0 0 35px;
-
-    font-size: clamp(3rem, 5.5vw, 6rem);
-    line-height: .91;
-    letter-spacing: -.06em;
-    font-weight: 500;
-}
-
-main .science-story-content h2 span {
-    display: block;
-    color: #777;
-}
-
-main .science-story-content p {
-    max-width: 680px;
-    margin: 0 0 20px;
-
-    color: #666;
-
-    font-size: 1.05rem;
-    line-height: 1.7;
-
-    text-align: justify;
-}
-
-
-/* =========================================================
-   LINKS
-   ========================================================= */
-
-main .science-story-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    margin-top: 20px;
-    padding-bottom: 5px;
-
-    border-bottom: 1px solid #999;
-
-    font-size: .9rem;
-}
-
-main .science-story-link span {
-    transition: transform .2s ease;
-}
-
-main .science-story-link:hover {
-    border-color: #171717;
-}
-
-main .science-story-link:hover span {
-    transform: translate(3px, -3px);
-}
-
-
-/* =========================================================
-   IMAGES
-   ========================================================= */
-
-main .science-story-image {
-    width: min(100%, 650px);
-    aspect-ratio: 16 / 9;
-
-    margin: 38px 0 0;
-
-    overflow: hidden;
-
-    background: #e8e7e1;
-}
-
-main .science-story-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    /* START BLACK & WHITE */
-    filter: grayscale(100%);
-
-    transition:
-        filter .5s ease,
-        transform .5s ease;
-}
-
-
-/* TURN INTO COLOR */
-
-main .science-story-image:hover img {
-    filter: grayscale(0%);
-    transform: scale(1.025);
-}
-
-
-/* =========================================================
-   COMING SOON
-   ========================================================= */
-
-main .science-story-future {
-    background: #eeede7;
-
-    margin-left: -6vw;
-    margin-right: -6vw;
-
-    padding-left: 6vw;
-    padding-right: 6vw;
-}
-
-main .science-story-coming {
-    display: inline-block;
-
-    margin-top: 20px;
-
-    color: #888;
-
-    font-size: .85rem;
-    font-style: italic;
-}
-
-
-/* =========================================================
-   CLOSING
-   ========================================================= */
-
-main .science-closing {
-    padding: 120px 0 140px;
-
-    display: grid;
-    grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
-    gap: 5vw;
-}
-
-main .science-closing-label {
-    color: #888;
-
-    font-size: .8rem;
-    text-transform: uppercase;
-    letter-spacing: .09em;
-}
-
-main .science-closing h2 {
-    margin: 0;
-
-    font-size: clamp(3.5rem, 7vw, 7rem);
-    line-height: .9;
-    letter-spacing: -.065em;
-    font-weight: 500;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-    main .science-intro {
-        display: block;
-        padding: 60px 0 70px;
-    }
-
-    main .science-intro-label {
-        margin-bottom: 45px;
-    }
-
-    main .science-intro-content h1 {
-        font-size: clamp(3.5rem, 15vw, 6rem);
-    }
-
-    main .science-intro-lead {
-        margin-top: 35px;
-        font-size: 1.5rem;
-    }
-
-    main .science-intro-text {
-        text-align: left;
-    }
-
-
-    main .science-story,
-    main .science-story-reverse {
-        display: block;
-
-        padding: 60px 0;
-
-        direction: ltr;
-    }
-
-    main .science-story-number,
-    main .science-story-reverse .science-story-number {
-        order: initial;
-
-        margin-bottom: 30px;
-
-        text-align: left;
-    }
-
-    main .science-story-content,
-    main .science-story-reverse .science-story-content {
-        order: initial;
-
-        margin-left: 0;
-    }
-
-    main .science-story-content h2 {
-        font-size: clamp(2.8rem, 12vw, 5rem);
-        margin-bottom: 30px;
-    }
-
-    main .science-story-content p {
-        text-align: left;
-    }
-
-
-    main .science-story-image {
-        width: 100%;
-        aspect-ratio: 16 / 9;
-
-        margin-top: 30px;
-    }
-
-
-    main .science-story-future {
-        margin-left: -7vw;
-        margin-right: -7vw;
-
-        padding-left: 7vw;
-        padding-right: 7vw;
-    }
-
-
-    main .science-closing {
-        display: block;
-
-        padding: 80px 0 100px;
-    }
-
-    main .science-closing-label {
-        margin-bottom: 40px;
-    }
-
-    main .science-closing h2 {
-        font-size: clamp(3.5rem, 14vw, 6rem);
-    }
-
+    padding: 90px 0;
 }
 
 
 /* =========================================================
    HEADER / NAVIGATION
-   ========================================================= */
+========================================================= */
 
 .site-header {
     padding: 30px 6vw;
@@ -1925,45 +90,9 @@ main .science-closing h2 {
 
 
 /* =========================================================
-   HEADER / NAVIGATION
-   ========================================================= */
-
-.site-header {
-    padding: 30px 6vw;
-}
-
-.nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    border-bottom: 1px solid #cfcfc8;
-    padding-bottom: 20px;
-}
-
-.nav-name {
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: -0.02em;
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-    font-size: 0.9rem;
-}
-
-.nav-links a {
-    color: #555;
-}
-
-.nav-links a:hover {
-    color: #111;
-}
-
-
-/* MOBILE MENU — hidden on desktop */
+   MOBILE MENU
+   Hidden on desktop
+========================================================= */
 
 .mobile-menu {
     display: none;
@@ -1993,13 +122,10 @@ main .science-closing h2 {
     position: absolute;
     top: calc(100% + 15px);
     right: 0;
-
     width: 210px;
     padding: 12px 20px;
-
     background: #f5f4ef;
     border: 1px solid #cfcfc8;
-
     z-index: 1000;
 }
 
@@ -2013,6 +139,1052 @@ main .science-closing h2 {
     border-top: 1px solid #deded8;
 }
 
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 78vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    grid-template-rows: auto 1fr;
+    column-gap: 70px;
+    align-items: center;
+    padding: 10px 0 120px;
+    border-bottom: 1px solid #cfcfc8;
+}
+
+.eyebrow {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #777;
+    text-align: center;
+}
+
+.hero-text {
+    width: 100%;
+    max-width: 850px;
+    margin-left: auto;
+}
+
+.hero h1 {
+    width: 100%;
+    max-width: none;
+    font-size: clamp(3.1rem, 6.5vw, 6.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.065em;
+    font-weight: 600;
+    text-align: right;
+}
+
+.hero-description {
+    width: 100%;
+    max-width: none;
+    margin-top: 40px;
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.hero-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-top: 45px;
+}
+
+.button {
+    background: #171717;
+    color: #fff;
+    padding: 13px 24px;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.button:hover {
+    background: #444;
+}
+
+.text-link {
+    font-size: 0.9rem;
+    border-bottom: 1px solid #999;
+    padding-bottom: 3px;
+}
+
+.text-link:hover {
+    border-color: #111;
+}
+
+
+/* =========================================================
+   HERO — PHOTO / SIDE
+========================================================= */
+
+.hero-side {
+    align-self: end;
+    padding-bottom: 135px;
+}
+
+.hero-photo {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 65px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    top: -15px;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(10%);
+}
+
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    margin-top: 25px;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.hero-meta a {
+    color: #555;
+}
+
+.hero-meta a:hover {
+    color: #111;
+}
+
+
+/* =========================================================
+   SECTION LABELS
+========================================================= */
+
+.section-label {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.section-label span:first-child {
+    color: #aaa;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+    padding-bottom: 80px;
+}
+
+.background-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.background-content h2 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+    font-weight: 500;
+}
+
+.background-content p {
+    max-width: 600px;
+    color: #666;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 0;
+    border-top: 1px solid #cfcfc8;
+}
+
+.project {
+    padding: 25px 0 40px;
+}
+
+.project:nth-child(3) {
+    grid-column: 1;
+}
+
+.project-number {
+    color: #999;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.project-content h2 {
+    max-width: 520px;
+    font-size: clamp(2rem, 3vw, 3.1rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.project-content p {
+    max-width: 600px;
+    color: #666;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.tags span {
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    padding: 5px 11px;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    border-top: 1px solid #cfcfc8;
+}
+
+.contact-content {
+    max-width: 850px;
+}
+
+.contact-content h2 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    font-weight: 500;
+}
+
+.contact-content p {
+    max-width: 600px;
+    margin-top: 35px;
+    color: #666;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.email-link {
+    display: inline-block;
+    margin-top: 35px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #999;
+    padding-bottom: 5px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    margin: 0 6vw;
+    padding: 30px 0 40px;
+    border-top: 1px solid #cfcfc8;
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.site-footer div {
+    display: flex;
+    gap: 20px;
+}
+
+.site-footer a:hover {
+    color: #111;
+}
+
+
+/* =========================================================
+   BACKGROUND PAGE
+========================================================= */
+
+.background-page {
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+.background-intro {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.background-intro-image {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.background-intro-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+}
+
+.background-intro h1 {
+    width: 100%;
+    margin: 0;
+    text-align: right;
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -0.065em;
+    font-weight: 500;
+    padding-bottom: 25px;
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   BACKGROUND STORY
+========================================================= */
+
+.background-story {
+    border-top: 1px solid #cfcfc8;
+}
+
+.background-block {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 8vw;
+    padding: 75px 0;
+    border-bottom: 1px solid #cfcfc8;
+    align-items: start;
+}
+
+.background-block-reverse {
+    direction: rtl;
+}
+
+.background-block-reverse > * {
+    direction: ltr;
+}
+
+
+/* =========================================================
+   BACKGROUND HEADING
+========================================================= */
+
+.background-heading {
+    max-width: 520px;
+}
+
+.background-number {
+    display: block;
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 22px;
+}
+
+.background-heading h2 {
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   BACKGROUND TEXT
+========================================================= */
+
+.background-page-content {
+    max-width: 650px;
+}
+
+.background-page-content p {
+    color: #666;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.background-page-content p:last-child {
+    margin-bottom: 0;
+}
+
+.background-closing {
+    color: #171717 !important;
+    font-size: 1.05rem;
+    margin-top: 0;
+}
+
+.background-lead {
+    width: 100%;
+    max-width: none;
+    margin-top: 40px;
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+
+/* =========================================================
+   BACKGROUND ACTIONS
+========================================================= */
+
+.background-actions {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-top: 50px;
+}
+
+
+/* =========================================================
+   CV PAGE
+========================================================= */
+
+.cv-page {
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+
+/* =========================================================
+   CV INTRO
+========================================================= */
+
+.cv-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    gap: 7vw;
+    padding: 60px 0 75px;
+    border-bottom: 1px solid #cfcfc8;
+}
+
+.cv-intro-heading h1 {
+    margin: 0;
+    font-size: clamp(4rem, 7vw, 7rem);
+    line-height: 0.92;
+    letter-spacing: -0.065em;
+    font-weight: 500;
+}
+
+.cv-intro-text {
+    align-self: end;
+}
+
+.cv-intro-text p {
+    margin: 0 0 22px;
+    color: #555;
+    font-size: 1.08rem;
+    line-height: 1.65;
+}
+
+.cv-intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CV SECTIONS
+========================================================= */
+
+.cv-section {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+    column-gap: 5vw;
+    padding: 60px 0;
+    border-bottom: 1px solid #cfcfc8;
+}
+
+.cv-section-reverse {
+    grid-template-columns: minmax(0, 1.3fr) minmax(220px, 0.7fr);
+}
+
+.cv-section-reverse .cv-section-heading {
+    order: 2;
+}
+
+.cv-section-reverse .cv-section-content {
+    order: 1;
+}
+
+.cv-section-heading {
+    position: relative;
+    align-self: start;
+}
+
+.cv-number {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 0.8rem;
+    color: #777;
+    letter-spacing: 0.03em;
+}
+
+.cv-section-heading h2 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4.2rem);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   CV ENTRIES
+========================================================= */
+
+.cv-entry {
+    padding: 0 0 38px;
+    margin-bottom: 38px;
+    border-bottom: 1px solid #deded8;
+}
+
+.cv-entry:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.cv-entry-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 12px;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+.cv-entry h3,
+.cv-skill h3,
+.cv-toolkit h3 {
+    margin: 0 0 8px;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.cv-entry-place {
+    margin: 0 0 18px;
+    color: #555;
+    font-style: italic;
+}
+
+.cv-entry p {
+    color: #555;
+}
+
+.cv-entry p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CV SKILLS
+========================================================= */
+
+.cv-skill {
+    padding: 0 0 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #deded8;
+}
+
+.cv-skill:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.cv-skill p {
+    margin: 0;
+    color: #555;
+}
+
+
+/* =========================================================
+   TECHNICAL TOOLKIT
+========================================================= */
+
+.cv-toolkit {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 55px 50px;
+}
+
+.cv-toolkit h3 {
+    margin-bottom: 10px;
+}
+
+.cv-toolkit p {
+    margin: 0;
+    color: #555;
+}
+
+
+/* =========================================================
+   SELECTED EXPERIENCE LIST
+========================================================= */
+
+.cv-list {
+    border-top: 1px solid #deded8;
+}
+
+.cv-list-item {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr);
+    gap: 40px;
+    padding: 25px 0;
+    border-bottom: 1px solid #deded8;
+}
+
+.cv-list-item strong {
+    font-weight: 600;
+}
+
+.cv-list-item span {
+    color: #555;
+}
+
+
+/* =========================================================
+   LANGUAGES
+========================================================= */
+
+.cv-languages {
+    max-width: 700px;
+}
+
+.cv-languages p {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 30px;
+    padding: 16px 0;
+    margin: 0;
+    border-bottom: 1px solid #deded8;
+}
+
+.cv-languages p:first-child {
+    border-top: 1px solid #deded8;
+}
+
+.cv-languages span {
+    color: #555;
+}
+
+
+/* =========================================================
+   CV PRESENTATION IMAGES
+========================================================= */
+
+.cv-image-block {
+    width: 100%;
+    margin: 10px 0 35px auto;
+}
+
+.cv-image-block-right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.cv-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.cv-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.cv-image-caption {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    color: #777;
+    font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   CV DOWNLOADS
+========================================================= */
+
+.cv-downloads {
+    padding: 70px 0 60px;
+    border-bottom: 1px solid #cfcfc8;
+}
+
+.cv-downloads-content {
+    width: min(850px, 100%);
+    margin-left: auto;
+    margin-top: 35px;
+}
+
+.cv-downloads-content h2 {
+    margin: 0 0 18px;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+    font-weight: 500;
+}
+
+.cv-downloads-content p {
+    max-width: 650px;
+    margin-bottom: 35px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.cv-download-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   CV ACTIONS
+========================================================= */
+
+.cv-actions {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-top: 55px;
+}
+
+
+/* =========================================================
+   FULL-WIDTH EXPERIENCE
+========================================================= */
+
+.cv-section-wide {
+    display: block;
+}
+
+.cv-section-wide .cv-section-heading {
+    margin-bottom: 45px;
+}
+
+.cv-section-wide .cv-section-content {
+    width: 100%;
+}
+
+.cv-section-wide .cv-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 7vw;
+    row-gap: 0;
+    border-top: 1px solid #deded8;
+}
+
+.cv-section-wide .cv-list-item {
+    display: block;
+    padding: 25px 0 28px;
+    border-bottom: 1px solid #deded8;
+}
+
+.cv-section-wide .cv-list-item strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   MY SCIENCE 4 ALL
+========================================================= */
+
+main .science-intro {
+    padding: 60px 0 100px;
+    border-bottom: 1px solid #cfcfc8;
+    display: grid;
+    grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr);
+    gap: 5vw;
+}
+
+main .science-intro-label {
+    color: #777;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+main .science-intro-label span {
+    display: block;
+    margin-bottom: 18px;
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+main .science-intro-content {
+    max-width: 900px;
+}
+
+main .science-intro-content h1 {
+    margin: 0;
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: 0.88;
+    letter-spacing: -0.07em;
+    font-weight: 500;
+}
+
+main .science-intro-lead {
+    max-width: 760px;
+    margin: 45px 0 35px;
+    font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    color: #333;
+}
+
+main .science-intro-text {
+    max-width: 680px;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+
+/* =========================================================
+   SCIENCE STORIES
+========================================================= */
+
+main .science-stories {
+    border-bottom: 1px solid #cfcfc8;
+}
+
+main .science-story {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr);
+    gap: 5vw;
+    padding: 85px 0;
+    border-bottom: 1px solid #cfcfc8;
+}
+
+main .science-story:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   SCIENCE STORY — REVERSE
+========================================================= */
+
+main .science-story-reverse {
+    grid-template-columns: minmax(0, 1.35fr) minmax(180px, 0.65fr);
+}
+
+main .science-story-reverse .science-story-number {
+    order: 2;
+    text-align: right;
+}
+
+main .science-story-reverse .science-story-content {
+    order: 1;
+    margin-left: auto;
+}
+
+
+/* =========================================================
+   SCIENCE STORY NUMBER
+========================================================= */
+
+main .science-story-number {
+    color: #aaa;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    padding-top: 5px;
+}
+
+
+/* =========================================================
+   SCIENCE STORY CONTENT
+========================================================= */
+
+main .science-story-content {
+    width: 100%;
+    max-width: 850px;
+}
+
+main .science-story-type {
+    margin-bottom: 22px;
+    color: #888;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+}
+
+main .science-story-content h2 {
+    max-width: 850px;
+    margin: 0 0 35px;
+    font-size: clamp(3rem, 5.5vw, 6rem);
+    line-height: 0.91;
+    letter-spacing: -0.06em;
+    font-weight: 500;
+}
+
+main .science-story-content h2 span {
+    display: block;
+    color: #777;
+}
+
+main .science-story-content p {
+    max-width: 680px;
+    margin: 0 0 20px;
+    color: #666;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+
+/* =========================================================
+   SCIENCE STORY LINKS
+========================================================= */
+
+main .science-story-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #999;
+    font-size: 0.9rem;
+}
+
+main .science-story-link span {
+    transition: transform 0.2s ease;
+}
+
+main .science-story-link:hover {
+    border-color: #171717;
+}
+
+main .science-story-link:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   SCIENCE STORY IMAGES
+========================================================= */
+
+main .science-story-image {
+    width: min(100%, 650px);
+    aspect-ratio: 16 / 9;
+    margin: 38px 0 0;
+    overflow: hidden;
+    background: #e8e7e1;
+}
+
+main .science-story-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition:
+        filter 0.5s ease,
+        transform 0.5s ease;
+}
+
+main .science-story-image:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   SCIENCE — COMING SOON
+========================================================= */
+
+main .science-story-future {
+    background: #eeede7;
+    margin-left: -6vw;
+    margin-right: -6vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+main .science-story-coming {
+    display: inline-block;
+    margin-top: 20px;
+    color: #888;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   SCIENCE — CLOSING
+========================================================= */
+
+main .science-closing {
+    padding: 120px 0 140px;
+    display: grid;
+    grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr);
+    gap: 5vw;
+}
+
+main .science-closing-label {
+    color: #888;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+}
+
+main .science-closing h2 {
+    margin: 0;
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    line-height: 0.9;
+    letter-spacing: -0.065em;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   GLOBAL MOBILE
+========================================================= */
+
 @media (max-width: 800px) {
 
     html,
@@ -2022,6 +1194,12 @@ main .science-closing h2 {
         overflow-x: hidden;
     }
 
+    main {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 7vw;
+    }
+
     .site-header {
         width: 100%;
         padding: 22px 7vw;
@@ -2029,14 +1207,19 @@ main .science-closing h2 {
 
     .nav {
         width: 100%;
+        max-width: 100%;
+        align-items: center;
     }
 
-    /* Hide desktop tabs */
+
+    /* =====================================================
+       NAVIGATION
+    ===================================================== */
+
     .nav-links {
         display: none;
     }
 
-    /* Show mobile menu */
     .mobile-menu {
         display: block;
     }
@@ -2044,5 +1227,513 @@ main .science-closing h2 {
     .nav-name {
         font-size: 0.95rem;
         white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        display: grid;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 50px;
+        min-height: auto;
+        padding: 60px 0 70px;
+        overflow: visible;
+    }
+
+    .eyebrow {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: 0;
+    }
+
+    .hero h1 {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        font-size: clamp(3rem, 13vw, 5rem);
+        line-height: 0.98;
+        text-align: left;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .hero-description {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-top: 35px;
+        text-align: left;
+    }
+
+    .hero-links {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 18px 24px;
+        margin-top: 35px;
+    }
+
+    .hero-side {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        align-self: auto;
+        padding-bottom: 0;
+    }
+
+    .hero-photo {
+        width: 170px;
+        height: 170px;
+        margin-bottom: 25px;
+        top: 0;
+    }
+
+    .hero-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-meta {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 22px;
+    }
+
+    .social-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px 25px;
+    }
+
+
+    /* =====================================================
+       GENERAL SECTIONS
+    ===================================================== */
+
+    .section {
+        padding: 60px 0;
+    }
+
+
+    /* =====================================================
+       CAPABILITIES
+    ===================================================== */
+
+    .capability-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .capability,
+    .capability:nth-child(even) {
+        padding: 35px 0;
+        border-left: none;
+    }
+
+
+    /* =====================================================
+       BACKGROUND
+    ===================================================== */
+
+    .background-page {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    .background-intro {
+        margin-bottom: 60px;
+    }
+
+    .background-intro h1 {
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+
+    .background-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .background-block,
+    .background-block-reverse {
+        display: block;
+        padding: 50px 0;
+        direction: ltr;
+    }
+
+    .background-heading {
+        margin-bottom: 35px;
+    }
+
+    .background-heading h2 {
+        font-size: 2.8rem;
+    }
+
+    .background-page-content p {
+        text-align: left;
+    }
+
+    .background-actions {
+        flex-wrap: wrap;
+        margin-top: 35px;
+    }
+
+
+    /* =====================================================
+       PROJECTS
+    ===================================================== */
+
+    .project-list {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+
+    .project:nth-child(2) {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .project:nth-child(3) {
+        grid-column: auto;
+        padding-top: 35px;
+    }
+
+    .project-content h2 {
+        font-size: 2.2rem;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .site-footer {
+        margin: 0 7vw;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+    /* =====================================================
+       CV — GLOBAL
+    ===================================================== */
+
+    .cv-page,
+    .cv-page section,
+    .cv-page div {
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       CV — INTRO
+    ===================================================== */
+
+    .cv-intro {
+        display: block !important;
+        grid-template-columns: none !important;
+        width: 100% !important;
+    }
+
+    .cv-intro-heading,
+    .cv-intro-text {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .cv-intro-heading {
+        margin-bottom: 40px;
+    }
+
+
+    /* =====================================================
+       CV — SECTIONS
+    ===================================================== */
+
+    .cv-section,
+    .cv-section-reverse,
+    .cv-section-wide {
+        display: block !important;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+        width: 100% !important;
+    }
+
+    .cv-section-heading,
+    .cv-section-content {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .cv-section-heading {
+        margin-bottom: 40px;
+    }
+
+    .cv-section-reverse .cv-section-heading,
+    .cv-section-reverse .cv-section-content {
+        order: initial !important;
+    }
+
+
+    /* =====================================================
+       CV — EXPERIENCE / EDUCATION
+    ===================================================== */
+
+    .cv-entry {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cv-entry-meta {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cv-entry-meta span {
+        display: block !important;
+        width: 100% !important;
+    }
+
+
+    /* =====================================================
+       CV — SKILLS
+    ===================================================== */
+
+    .cv-skill {
+        display: block !important;
+        width: 100% !important;
+    }
+
+
+    /* =====================================================
+       CV — TOOLKIT
+    ===================================================== */
+
+    .cv-toolkit {
+        display: block !important;
+        grid-template-columns: none !important;
+        width: 100% !important;
+    }
+
+    .cv-toolkit > div {
+        display: block !important;
+        width: 100% !important;
+    }
+
+
+    /* =====================================================
+       CV — SELECTED EXPERIENCE
+    ===================================================== */
+
+    .cv-list {
+        display: block !important;
+        grid-template-columns: none !important;
+        width: 100% !important;
+    }
+
+    .cv-list-item {
+        display: block !important;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+        width: 100% !important;
+    }
+
+
+    /* =====================================================
+       CV — LANGUAGES
+    ===================================================== */
+
+    .cv-languages {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cv-languages p {
+        display: block !important;
+        grid-template-columns: none !important;
+        width: 100% !important;
+    }
+
+    .cv-languages strong,
+    .cv-languages span {
+        display: block !important;
+        width: 100% !important;
+    }
+
+
+    /* =====================================================
+       CV — IMAGES
+    ===================================================== */
+
+    .cv-image-block,
+    .cv-image-block-right,
+    .cv-image {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .cv-image img {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+
+    /* =====================================================
+       CV — DOWNLOADS
+    ===================================================== */
+
+    .cv-downloads,
+    .cv-downloads-content {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .cv-download-links {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cv-download-links > * {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+
+    /* =====================================================
+       CV — ACTIONS
+    ===================================================== */
+
+    .cv-actions {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cv-actions > * {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+
+    /* =====================================================
+       SCIENCE — INTRO
+    ===================================================== */
+
+    main .science-intro {
+        display: block;
+        padding: 60px 0 70px;
+    }
+
+    main .science-intro-label {
+        margin-bottom: 45px;
+    }
+
+    main .science-intro-content h1 {
+        font-size: clamp(3.5rem, 15vw, 6rem);
+    }
+
+    main .science-intro-lead {
+        margin-top: 35px;
+        font-size: 1.5rem;
+    }
+
+    main .science-intro-text {
+        text-align: left;
+    }
+
+
+    /* =====================================================
+       SCIENCE — STORIES
+    ===================================================== */
+
+    main .science-story,
+    main .science-story-reverse {
+        display: block;
+        padding: 60px 0;
+        direction: ltr;
+    }
+
+    main .science-story-number,
+    main .science-story-reverse .science-story-number {
+        order: initial;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    main .science-story-content,
+    main .science-story-reverse .science-story-content {
+        order: initial;
+        margin-left: 0;
+    }
+
+    main .science-story-content h2 {
+        font-size: clamp(2.8rem, 12vw, 5rem);
+        margin-bottom: 30px;
+    }
+
+    main .science-story-content p {
+        text-align: left;
+    }
+
+    main .science-story-image {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        margin-top: 30px;
+    }
+
+
+    /* =====================================================
+       SCIENCE — COMING SOON
+    ===================================================== */
+
+    main .science-story-future {
+        margin-left: -7vw;
+        margin-right: -7vw;
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+
+    /* =====================================================
+       SCIENCE — CLOSING
+    ===================================================== */
+
+    main .science-closing {
+        display: block;
+        padding: 80px 0 100px;
+    }
+
+    main .science-closing-label {
+        margin-bottom: 40px;
+    }
+
+    main .science-closing h2 {
+        font-size: clamp(3.5rem, 14vw, 6rem);
     }
 }
