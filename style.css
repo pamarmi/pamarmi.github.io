@@ -1924,54 +1924,125 @@ main .science-closing h2 {
 }
 
 
-/* ---------------------------------------------------------
-   MOBILE MENU
-   --------------------------------------------------------- */
+/* =========================================================
+   HEADER / NAVIGATION
+   ========================================================= */
 
-.nav-menu {
-    display: none;
-    position: relative;
+.site-header {
+    padding: 30px 6vw;
 }
 
-.nav-menu summary {
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #cfcfc8;
+    padding-bottom: 20px;
+}
+
+.nav-name {
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 0.9rem;
+}
+
+.nav-links a {
+    color: #555;
+}
+
+.nav-links a:hover {
+    color: #111;
+}
+
+
+/* MOBILE MENU — hidden on desktop */
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu summary {
     list-style: none;
     cursor: pointer;
     color: #555;
     font-size: 0.9rem;
 }
 
-.nav-menu summary::-webkit-details-marker {
+.mobile-menu summary::-webkit-details-marker {
     display: none;
 }
 
-.nav-menu summary::after {
+.mobile-menu summary::after {
     content: "☰";
     margin-left: 8px;
 }
 
-.nav-menu[open] summary::after {
+.mobile-menu[open] summary::after {
     content: "×";
 }
 
-.nav-menu-links {
+.mobile-menu-links {
     position: absolute;
     top: calc(100% + 15px);
     right: 0;
-    z-index: 100;
 
     width: 210px;
-    padding: 15px 20px;
+    padding: 12px 20px;
 
     background: #f5f4ef;
     border: 1px solid #cfcfc8;
+
+    z-index: 1000;
 }
 
-.nav-menu-links a {
+.mobile-menu-links a {
     display: block;
     padding: 9px 0;
     color: #555;
 }
 
-.nav-menu-links a + a {
+.mobile-menu-links a + a {
     border-top: 1px solid #deded8;
+}
+
+@media (max-width: 800px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .site-header {
+        width: 100%;
+        padding: 22px 7vw;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    /* Hide desktop tabs */
+    .nav-links {
+        display: none;
+    }
+
+    /* Show mobile menu */
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-name {
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
 }
