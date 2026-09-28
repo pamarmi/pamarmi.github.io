@@ -391,6 +391,12 @@ MOBILE
 
 @media (max-width: 800px) {
 
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 main {
     padding: 0 7vw;
 }
@@ -1877,8 +1883,49 @@ main .science-closing h2 {
 }
 
 
+/* =========================================================
+   HEADER / NAVIGATION
+   ========================================================= */
+
+.site-header {
+    padding: 30px 6vw;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cfcfc8;
+    padding-bottom: 20px;
+}
+
+.nav-name {
+    flex-shrink: 0;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 0.9rem;
+}
+
+.nav-links a {
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #111;
+}
+
+
 /* ---------------------------------------------------------
-   MOBILE NAVIGATION
+   MOBILE MENU
    --------------------------------------------------------- */
 
 .nav-menu {
@@ -1889,8 +1936,8 @@ main .science-closing h2 {
 .nav-menu summary {
     list-style: none;
     cursor: pointer;
-    font-size: .95rem;
-    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
 }
 
 .nav-menu summary::-webkit-details-marker {
@@ -1900,7 +1947,6 @@ main .science-closing h2 {
 .nav-menu summary::after {
     content: "☰";
     margin-left: 8px;
-    font-size: 1rem;
 }
 
 .nav-menu[open] summary::after {
@@ -1909,37 +1955,23 @@ main .science-closing h2 {
 
 .nav-menu-links {
     position: absolute;
-    top: calc(100% + 18px);
+    top: calc(100% + 15px);
     right: 0;
-    width: 190px;
-    padding: 18px 20px;
+    z-index: 100;
+
+    width: 210px;
+    padding: 15px 20px;
+
     background: #f5f4ef;
     border: 1px solid #cfcfc8;
-    z-index: 100;
 }
 
 .nav-menu-links a {
     display: block;
     padding: 9px 0;
-    text-decoration: none;
+    color: #555;
 }
 
 .nav-menu-links a + a {
     border-top: 1px solid #deded8;
-}
-
-@media (max-width: 800px) {
-
-    .nav {
-        align-items: center;
-    }
-
-    .nav-links-desktop {
-        display: none;
-    }
-
-    .nav-menu {
-        display: block;
-    }
-
 }
