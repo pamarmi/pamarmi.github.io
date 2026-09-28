@@ -1875,3 +1875,71 @@ main .science-closing h2 {
     }
 
 }
+
+
+/* ---------------------------------------------------------
+   MOBILE NAVIGATION
+   --------------------------------------------------------- */
+
+.nav-menu {
+    display: none;
+    position: relative;
+}
+
+.nav-menu summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: .95rem;
+    font-weight: 600;
+}
+
+.nav-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav-menu summary::after {
+    content: "☰";
+    margin-left: 8px;
+    font-size: 1rem;
+}
+
+.nav-menu[open] summary::after {
+    content: "×";
+}
+
+.nav-menu-links {
+    position: absolute;
+    top: calc(100% + 18px);
+    right: 0;
+    width: 190px;
+    padding: 18px 20px;
+    background: #f5f4ef;
+    border: 1px solid #cfcfc8;
+    z-index: 100;
+}
+
+.nav-menu-links a {
+    display: block;
+    padding: 9px 0;
+    text-decoration: none;
+}
+
+.nav-menu-links a + a {
+    border-top: 1px solid #deded8;
+}
+
+@media (max-width: 800px) {
+
+    .nav {
+        align-items: center;
+    }
+
+    .nav-links-desktop {
+        display: none;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+
+}
