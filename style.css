@@ -293,7 +293,7 @@ main {
 ========================================================= */
 
 .background {
-    padding-bottom: 80px;
+    padding-bottom: 50px;
 }
 
 .background-content {
@@ -488,8 +488,8 @@ main {
 .background-block {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 8vw;
-    padding: 75px 0;
+    gap: 6vw;
+    padding: 50px 0;
     border-bottom: 1px solid #cfcfc8;
     align-items: start;
 }
@@ -531,7 +531,7 @@ main {
 ========================================================= */
 
 .background-page-content {
-    max-width: 650px;
+    max-width: 520px;
 }
 
 .background-page-content p {
@@ -627,7 +627,7 @@ main {
     display: grid;
     grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
     column-gap: 5vw;
-    padding: 60px 0;
+    padding: 50px 0;
     border-bottom: 1px solid #cfcfc8;
 }
 
@@ -670,8 +670,8 @@ main {
 ========================================================= */
 
 .cv-entry {
-    padding: 0 0 38px;
-    margin-bottom: 38px;
+    padding: 0 0 32px;
+    margin-bottom: 32px;
     border-bottom: 1px solid #deded8;
 }
 
@@ -684,7 +684,7 @@ main {
 .cv-entry-meta {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 25px;
     margin-bottom: 12px;
     color: #777;
     font-size: 0.85rem;
@@ -767,8 +767,8 @@ main {
 .cv-list-item {
     display: grid;
     grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr);
-    gap: 40px;
-    padding: 25px 0;
+    gap: 25px;
+    padding: 20px 0;
     border-bottom: 1px solid #deded8;
 }
 
