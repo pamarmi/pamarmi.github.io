@@ -932,7 +932,7 @@ main {
 ========================================================= */
 
 main .science-intro {
-    padding: 60px 0 100px;
+    padding: 60px 0 20px;
     border-bottom: 1px solid #cfcfc8;
     display: grid;
     grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr);
@@ -996,7 +996,7 @@ main .science-story {
     display: grid;
     grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr);
     gap: 5vw;
-    padding: 85px 0;
+    padding: 65px 0;
     border-bottom: 1px solid #cfcfc8;
 }
 
